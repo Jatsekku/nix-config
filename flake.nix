@@ -8,6 +8,10 @@
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs"; 
         };
+
+        impermanence = {
+            url = "github:nix-community/impermanence";
+        };
     
         disko = {
             url = "github:nix-community/disko/";
@@ -19,6 +23,7 @@
         self,
         nixpkgs,
         disko,
+        impermanence,
         home-manager
     }: {
         nixosConfigurations = {
@@ -27,6 +32,7 @@
 
                 modules = [
                     home-manager.nixosModules.home-manager
+                    impermanence.nixosModules.impermanence
                     ./hosts/vm-test/configuration.nix
                     disko.nixosModules.disko
                 ];
