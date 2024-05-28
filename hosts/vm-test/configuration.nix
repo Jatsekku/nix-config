@@ -1,6 +1,7 @@
 {config, lib, pkgs, ...}: {
     imports = [
         ../../common/base
+        ../../common/hyprland.nix
 
         ../../disko/disko_zfs_singleSSD.nix
 
