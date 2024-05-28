@@ -5,7 +5,7 @@
 
         ../../disko/disko_zfs_singleSSD.nix
 
-        ../../users/test
+        ../../users/jatsekku
 
         ./networking.nix
         ./hardware-configuration.nix
