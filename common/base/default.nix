@@ -7,5 +7,6 @@
     ./impermanence.nix
     ./nix.nix
     ./packages.nix
+    ./sound.nix
   ];
 }
