@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+    imports = [
+	../../home/waybar.nix
+    ];
+
     home.username = "jatsekku";
     home.homeDirectory = "/home/jatsekku";
     home.stateVersion = "23.11";
