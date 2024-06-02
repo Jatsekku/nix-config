@@ -3,6 +3,7 @@
 {
     imports = [
 	../../home/waybar.nix
+	../../home/kitty.nix
     ];
 
     home.username = "jatsekku";
