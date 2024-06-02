@@ -12,6 +12,7 @@
     ];
     
     boot.kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
+    nixpkgs.config.allowUnfree = true;
 
     system.stateVersion = "23.11";
 }
