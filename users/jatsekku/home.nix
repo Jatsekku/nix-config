@@ -4,6 +4,7 @@
     imports = [
 	../../home/waybar.nix
 	../../home/kitty.nix
+	../../home/wofi.nix
     ];
 
     home.username = "jatsekku";
