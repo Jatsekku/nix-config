@@ -5,6 +5,7 @@
 	../../home/waybar.nix
 	../../home/kitty.nix
 	../../home/wofi.nix
+	../../home/vscode.nix
     ];
 
     home.username = "jatsekku";
