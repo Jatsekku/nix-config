@@ -38,6 +38,17 @@
                 ];
 
             };
+            anemone = nixpkgs.lib.nixosSystem {
+                system = "x86_64-linux";
+
+                modules = [
+                    home-manager.nixosModules.home-manager
+                    impermanence.nixosModules.impermanence
+                    ./hosts/anemone/configuration.nix
+                    disko.nixosModules.disko
+                ];
+
+            };
         };
     };
 }
