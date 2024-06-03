@@ -2,6 +2,7 @@
     imports = [
         ../../common/base
         ../../common/hyprland.nix
+        ../../common/sddm.nix
 
         ../../disko/disko_zfs_singleSSD.nix
 
