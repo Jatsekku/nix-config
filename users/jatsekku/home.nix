@@ -2,6 +2,7 @@
 
 {
     imports = [
+    ../../home/hyprland.nix
 	../../home/waybar.nix
 	../../home/kitty.nix
 	../../home/wofi.nix
