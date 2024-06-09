@@ -4,6 +4,7 @@
     imports = [
     ../../home/hyprland.nix
 	../../home/waybar.nix
+    ../../home/kicad.nix
 	../../home/kitty.nix
 	../../home/wofi.nix
 	../../home/vscode.nix
