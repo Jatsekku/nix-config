@@ -1,6 +1,7 @@
 {config, lib, pkgs, ...}: {
     imports = [
         ../../common/base
+        ../../common/graphics.nix
         ../../common/hyprland.nix
         ../../common/sddm.nix
         ../../common/gaming.nix
