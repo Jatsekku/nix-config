@@ -17,5 +17,8 @@
     boot.kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
     nixpkgs.config.allowUnfree = true;
 
+    # Enable graphic card driver for X and Wayland
+    services.xserver.videoDrivers = ["amdgpu"];
+
     system.stateVersion = "23.11";
 }
