@@ -8,6 +8,7 @@
 	../../home/kitty.nix
 	../../home/wofi.nix
 	../../home/vscode.nix
+	../../home/virt-manager.nix
     ];
 
     home.username = "jatsekku";
