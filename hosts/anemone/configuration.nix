@@ -5,6 +5,7 @@
         ../../common/hyprland.nix
         ../../common/sddm.nix
         ../../common/gaming.nix
+        ../../common/virtualization.nix
 
         ../../disko/disko_zfs_singleSSD.nix
 
