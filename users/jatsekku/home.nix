@@ -10,6 +10,7 @@
 	../../home/vscode.nix
 	../../home/virt-manager.nix
 	../../home/fzf.nix
+	../../home/obsidian.nix
     ];
 
     home.username = "jatsekku";
