@@ -7,7 +7,7 @@
     ../../home/kicad.nix
 	../../home/kitty.nix
 	../../home/wofi.nix
-	../../home/vscode.nix
+    ../../home/vscodium.nix
 	../../home/virt-manager.nix
 	../../home/fzf.nix
 	../../home/obsidian.nix
