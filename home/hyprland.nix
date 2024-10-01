@@ -32,6 +32,10 @@
                 "DP-5,1920x1080@60,1920x0,1,transform,2"
             ];
 
+            input = {
+                kb_layout = "pl";
+            };
+
             # Key bindings
             bind = [
                 # Open terminal
