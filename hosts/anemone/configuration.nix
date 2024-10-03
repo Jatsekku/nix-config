@@ -6,7 +6,7 @@
         ../../common/sddm.nix
         ../../common/gaming.nix
         ../../common/virtualization.nix
-
+        ../../common/polkit.nix
         ../../disko/disko_zfs_singleSSD.nix
 
         ../../users/jatsekku
@@ -15,7 +15,7 @@
         ./hardware-configuration.nix
     ];
     
-    boot.kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
+    #boot.kernelPackages = linuxPackages_6_6;
     nixpkgs.config.allowUnfree = true;
 
     # Enable graphic card driver for X and Wayland
