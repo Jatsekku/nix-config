@@ -7,6 +7,7 @@
         ../../common/gaming.nix
         ../../common/virtualization.nix
         ../../common/polkit.nix
+        ../../common/act.nix
         ../../disko/disko_zfs_singleSSD.nix
 
         ../../users/jatsekku
