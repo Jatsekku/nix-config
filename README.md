@@ -1,0 +1,1 @@
+## Beginnig of my journey with NixOS
