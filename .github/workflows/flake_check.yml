@@ -1,0 +1,45 @@
+name: Flake format, lint and check
+
+# Trigger on every pull_request or push
+on:
+  - pull_request
+  - push
+
+jobs:
+  flake-check:
+    runs-on: ubuntu-latest
+    
+    # Allow the workflow to modify repo content
+    permissions:
+      contents: write
+
+    steps:
+    # Checkout repository code to runner
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # Install Nix packet manager
+    - name: Install Nix
+      uses: cachix/install-nix-action@v26
+      with: 
+        nix_path: nixpkgs=channel:nixos-unstable
+
+    # Install statix and nixfmt
+    - name: Install tools for liniting and formating
+      run: nix-env -i statix nixfmt -f '<nixpkgs>'
+
+    # Run statix (linter)
+    - name: Run Statix Lint
+      run: statix fix
+
+    # Run nixfmt (formater)
+    - name: Run Nix Format
+      run: nix fmt
+
+    # Check if flake can be evaluted successfully (full check)
+    - name: Nix Flake Check
+      run: nix flake check --keep-going
+
+    # Check health of flake.lock
+    - name: Nix Flake Checker
+      uses: DeterminateSystems/flake-checker-action@v5
