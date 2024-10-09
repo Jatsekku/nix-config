@@ -1,17 +1,17 @@
 { pkgs, ... }:
 
 {
-    virtualisation = {
-        libvirtd = {
-            enable = true;
-            qemu.runAsRoot = true;
-        };
+  virtualisation = {
+    libvirtd = {
+      enable = true;
+      qemu.runAsRoot = true;
     };
+  };
 
-    environment.systemPackages = with pkgs; [
-        qemu_kvm
-        qemu
-    ];
+  environment.systemPackages = with pkgs; [
+    qemu_kvm
+    qemu
+  ];
 
-    programs.virt-manager.enable = true;
+  programs.virt-manager.enable = true;
 }

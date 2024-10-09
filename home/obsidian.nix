@@ -1,5 +1,10 @@
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
 {
-    home.packages = with pkgs; [ obsidian ];
+  home.packages = with pkgs; [ obsidian ];
 }

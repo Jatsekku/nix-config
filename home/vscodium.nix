@@ -1,8 +1,13 @@
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
 {
-    programs.vscode = {
-        enable = true;
-        package = pkgs.vscodium.fhs;
-    };
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscodium.fhs;
+  };
 }

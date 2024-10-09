@@ -1,26 +1,34 @@
-{config, lib, pkgs, ...}: {
-    imports = [
-        ../../common/base
-        ../../common/graphics.nix
-        ../../common/hyprland.nix
-        ../../common/sddm.nix
-        ../../common/gaming.nix
-        ../../common/virtualization.nix
-        ../../common/polkit.nix
-        ../../common/act.nix
-        ../../disko/disko_zfs_singleSSD.nix
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  imports = [
+    ../../common/base
+    ../../common/graphics.nix
+    ../../common/hyprland.nix
+    ../../common/sddm.nix
+    ../../common/gaming.nix
+    ../../common/virtualization.nix
+    ../../common/polkit.nix
+    ../../common/act.nix
+    ../../common/docker.nix
+    ../../common/nh.nix
+    ../../disko/disko_zfs_singleSSD.nix
 
-        ../../users/jatsekku
+    ../../users/jatsekku
 
-        ./networking.nix
-        ./hardware-configuration.nix
-    ];
-    
-    #boot.kernelPackages = linuxPackages_6_6;
-    nixpkgs.config.allowUnfree = true;
+    ./networking.nix
+    ./hardware-configuration.nix
+  ];
 
-    # Enable graphic card driver for X and Wayland
-    services.xserver.videoDrivers = ["amdgpu"];
+  #boot.kernelPackages = linuxPackages_6_6;
+  nixpkgs.config.allowUnfree = true;
 
-    system.stateVersion = "23.11";
+  # Enable graphic card driver for X and Wayland
+  services.xserver.videoDrivers = [ "amdgpu" ];
+
+  system.stateVersion = "23.11";
 }

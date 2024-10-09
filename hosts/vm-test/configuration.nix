@@ -1,17 +1,23 @@
-{config, lib, pkgs, ...}: {
-    imports = [
-        ../../common/base
-        ../../common/hyprland.nix
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  imports = [
+    ../../common/base
+    ../../common/hyprland.nix
 
-        ../../disko/disko_zfs_singleSSD.nix
+    ../../disko/disko_zfs_singleSSD.nix
 
-        ../../users/jatsekku
+    ../../users/jatsekku
 
-        ./networking.nix
-        ./hardware-configuration.nix
-    ];
-    
-    boot.kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
+    ./networking.nix
+    ./hardware-configuration.nix
+  ];
 
-    system.stateVersion = "23.11";
+  boot.kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
+
+  system.stateVersion = "23.11";
 }

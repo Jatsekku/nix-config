@@ -1,5 +1,5 @@
 { pkgs, ... }:
 
 {
-    environment.systemPackages = [ pkgs.act ];
+  environment.systemPackages = [ pkgs.act ];
 }

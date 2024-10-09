@@ -1,8 +1,12 @@
-{ pkgs, lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 
 {
-    programs.vscode = {
-        enable = true;
-    };
+  programs.vscode = {
+    enable = true;
+  };
 }
-

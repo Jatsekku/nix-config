@@ -1,11 +1,11 @@
 { pkgs, ... }:
 
 {
-    environment.systemPackages = with pkgs; [
-        curl
-        git
-        neofetch
-        neovim
-        wget
-    ];
+  environment.systemPackages = with pkgs; [
+    curl
+    git
+    neofetch
+    neovim
+    wget
+  ];
 }
