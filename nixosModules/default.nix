@@ -9,5 +9,7 @@
   ...
 }:
 {
-
+  imports = [
+    ./grub.nix
+  ];
 }
