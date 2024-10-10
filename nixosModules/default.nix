@@ -11,6 +11,7 @@
   imports = [
     inputs.disko.nixosModules.default
     ./grub.nix
+    ./nix.nix
   ];
 
   myNixOS = {
