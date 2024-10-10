@@ -23,9 +23,9 @@
       myLib = import ./myLib/default.nix { inherit inputs; };
     in
     {
-      nixosConfigurations =
-        {
-        };
+      nixosConfigurations = {
+        anemone = myLib.mkSystem ./hosts/anemone;
+      };
 
       # Configure nix fmt
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
