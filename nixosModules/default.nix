@@ -10,6 +10,7 @@
 }:
 {
   imports = [
+    inputs.disko.nixosModules.default
     ./grub.nix
   ];
 
