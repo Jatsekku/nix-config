@@ -7,6 +7,7 @@
 {
   imports = [
     ./grub.nix
+    ./nix.nix
   ];
 
   myNixOS = {
