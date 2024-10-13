@@ -7,6 +7,9 @@
 
   outputs =
     { self, nixpkgs, ... }@inputs:
+    let
+      myLib = import ./myLib/default.nix { inherit inputs; };
+    in
     {
       nixosConfigurations =
         {
