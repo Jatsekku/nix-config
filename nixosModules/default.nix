@@ -11,7 +11,9 @@
 {
   imports = [
     inputs.disko.nixosModules.default
+    inputs.hyprland.nixosModules.default
     ./grub.nix
+    ./hyprland
     ./nh.nix
     ./nix.nix
     ./virtualization
