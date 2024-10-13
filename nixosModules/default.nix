@@ -14,5 +14,6 @@
     ./grub.nix
     ./nh.nix
     ./nix.nix
+    ./virtualization
   ];
 }
