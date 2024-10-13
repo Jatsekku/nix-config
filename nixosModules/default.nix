@@ -11,8 +11,10 @@
 {
   imports = [
     inputs.disko.nixosModules.default
+    inputs.home-manager.nixosModules.default
     inputs.hyprland.nixosModules.default
     ./grub.nix
+    ./home-manager.nix
     ./hyprland
     ./nh.nix
     ./nix.nix
