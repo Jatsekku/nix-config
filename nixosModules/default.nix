@@ -14,10 +14,12 @@
     ./grub.nix
     ./nh.nix
     ./nix.nix
+    ./virtualization
   ];
 
   myNixOS = {
     grub.enable = lib.mkDefault true;
     nh.enable = lib.mkDefault true;
+    docker.enable = lib.mkDefault false;
   };
 }
