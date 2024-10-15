@@ -10,10 +10,15 @@
 }:
 {
   imports = [
+    ./fzf.nix
   ];
 
   home = {
     inherit username;
     homeDirectory = "/home/${username}";
+  };
+
+  myHomeManager = {
+    fzf.enable = lib.mkDefault true;
   };
 }
