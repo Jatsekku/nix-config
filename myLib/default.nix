@@ -29,4 +29,36 @@ rec {
         outputs.nixosModules.default
       ];
     };
+
+  /**
+    Build home confgiuration
+
+    # Type
+
+    ```
+    mkHome :: { config :: String; userName :: String, platform :: String} -> AttrSet
+    ```
+  */
+  mkHome =
+    {
+      config,
+      username,
+      platform,
+    }:
+    inputs.home-manager.lib.homeManagerConfiguration {
+      pkgs = inputs.nixpkgs.legacyPackages.${platform};
+      extraSpecialArgs = {
+        inherit
+          inputs
+          outputs
+          myLib
+          username
+          ;
+      };
+      modules = [
+        config
+        outputs.homeManagerModules.default
+        outputs.userManager.default
+      ];
+    };
 }
