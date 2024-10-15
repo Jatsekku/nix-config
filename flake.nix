@@ -27,6 +27,13 @@
         anemone = myLib.mkSystem ./hosts/anemone;
       };
 
+      homeConfigurations = {
+        "jatsekku@anemone" = myLib.mkHome {
+          username = "jatsekku";
+          platform = "x86_64-linux";
+        };
+      };
+
       # Configure nix fmt
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
 
