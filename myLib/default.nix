@@ -23,4 +23,25 @@ rec {
         outputs.nixosModules.default
       ];
     };
+
+  mkHome =
+    { username, platform }:
+    let
+      config = ../users/${username};
+    in
+    inputs.home-manager.lib.homeManagerConfiguration {
+      pkgs = inputs.nixpkgs.legacyPackages.${platform};
+      extraSpecialArgs = {
+        inherit
+          inputs
+          outputs
+          myLib
+          username
+          ;
+      };
+      modules = [
+        config
+        outputs.homeManagerModules.default
+      ];
+    };
 }
