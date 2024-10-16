@@ -11,6 +11,7 @@
 {
   imports = [
     ./fzf.nix
+    ./obsidian.nix
   ];
 
   home = {
@@ -20,5 +21,6 @@
 
   myHomeManager = {
     fzf.enable = lib.mkDefault true;
+    obsidian.enable = lib.mkDefault false;
   };
 }
