@@ -10,6 +10,7 @@
 }:
 {
   imports = [
+    ./git.nix
     ./fzf.nix
     ./obsidian.nix
     ./vscode.nix
@@ -22,6 +23,7 @@
   };
 
   myHomeManager = {
+    git.enable = lib.mkDefault true;
     fzf.enable = lib.mkDefault true;
     obsidian.enable = lib.mkDefault false;
     vscode.enable = lib.mkDefault false;
