@@ -25,6 +25,7 @@
     {
       nixosConfigurations = myLib.mkSystemsConfigurations {
         anemone = ./hosts/anemone;
+        iris = ./hosts/iris;
       };
 
       homeConfigurations = myLib.mkHomesConfigurations {
