@@ -25,6 +25,7 @@
     {
       nixosConfigurations = {
         anemone = myLib.mkSystem ./hosts/anemone;
+        iris = myLib.mkSystem ./hosts/iris;
       };
 
       homeConfigurations = {
