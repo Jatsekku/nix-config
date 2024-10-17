@@ -12,6 +12,7 @@
     inputs.disko.nixosModules.default
     inputs.home-manager.nixosModules.default
     inputs.hyprland.nixosModules.default
+    ./git.nix
     ./grub.nix
     ./home-manager.nix
     ./hyprland
@@ -21,6 +22,7 @@
   ];
 
   myNixOS = {
+    git.enable = lib.mkDefault true;
     grub.enable = lib.mkDefault true;
     home-manager.enable = lib.mkDefault true;
     hyprland.enable = lib.mkDefault true;
