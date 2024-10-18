@@ -5,7 +5,47 @@ let
 in
 rec {
   /**
-    Build system confgiuration
+    Get list of usernames at given hostname from list defined in form of homeConfgiurations:
+
+    # Example
+
+    ```nix
+    homeConfgiurations = {
+      "jatsekku@anemone" = {};
+      "jatsekku@iris" = {};
+      "ewe@iris" = {};
+    };
+    getUsersForHost {
+      hostname = "iris";
+      usersAtHosts = homeConfgiurations;
+    };
+    =>
+    [ "ewe" "jatsekku" ]
+    ```
+
+    # Type
+
+    ```
+    getUsersForHost :: { hostname :: String; userAtHosts :: AttrSet} -> [String]
+    ```
+  */
+  getUsersForHost =
+    {
+      # Hostanme for which usernames will be retruned
+      hostName,
+      # Attribute set with "username@host" strings that will be processed
+      usersAtHosts,
+    }:
+    let
+      homeUsersAtHosts = builtins.attrNames (usersAtHosts);
+      isAssociated = userAtHost: builtins.elemAt (builtins.split "@" userAtHost) 2 == hostName;
+      username = userAtHost: builtins.elemAt (builtins.split "@" userAtHost) 0;
+      filtered = builtins.filter isAssociated homeUsersAtHosts;
+    in
+    (builtins.map username filtered);
+
+  /**
+    Build systems configuration
 
     # Type
 
