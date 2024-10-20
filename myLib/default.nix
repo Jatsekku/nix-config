@@ -142,4 +142,12 @@ rec {
         inherit config username platform;
       }
     ) configurations;
+
+  /**
+    Translate homeManager AttrSet to nixOS AttrSet
+  */
+  userManagerToNixOS =
+    { hostName, username }:
+    outputs.homeConfigurations."${username}@${hostName}".config.myUserManager.${username};
+
 }
