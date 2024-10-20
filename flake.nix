@@ -32,5 +32,6 @@
 
       nixosModules.default = ./nixosModules;
       homeManagerModules.default = ./homeManagerModules;
+      userManager.default = ./userManager;
     };
 }
