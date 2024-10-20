@@ -31,6 +31,25 @@ rec {
     };
 
   /**
+    Build systems configurations
+
+    # Type
+
+    ```
+    mkSystemsConfigurations :: AttrSet -> AttrSet
+    ```
+  */
+  mkSystemsConfigurations =
+    configurations:
+    builtins.mapAttrs (
+      hostName: config:
+      myLib.mkSystem {
+        inherit config;
+        inherit hostName;
+      }
+    ) configurations;
+
+  /**
     Build home confgiuration
 
     # Type
