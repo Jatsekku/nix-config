@@ -119,4 +119,26 @@ rec {
         outputs.homeManagerModules.default
       ];
     };
+
+  /**
+    Build homes configurations
+
+    # Type
+
+    ```
+    mkHomesConfigurations :: AttrSet -> AttrSet
+    ```
+  */
+  mkHomesConfigurations =
+    configurations:
+    builtins.mapAttrs (
+      userAtHost:
+      { config, platform }:
+      let
+        username = builtins.elemAt (builtins.split "@" userAtHost) 0;
+      in
+      myLib.mkHome {
+        inherit config username platform;
+      }
+    ) configurations;
 }
