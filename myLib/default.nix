@@ -55,6 +55,23 @@ rec {
   */
   mkSystem =
     { config, hostName }:
+    let
+      usersAtHosts = outputs.homeConfigurations;
+      usernames = myLib.getUsersForHost {
+        inherit hostName;
+        inherit usersAtHosts;
+      };
+      usersConfigs = {
+        users.users = (
+          builtins.listToAttrs (
+            builtins.map (username: {
+              name = username;
+              value = myLib.userManagerToNixOS { inherit username hostName; };
+            }) usernames
+          )
+        );
+      };
+    in
     inputs.nixpkgs.lib.nixosSystem {
       specialArgs = {
         inherit
@@ -65,6 +82,7 @@ rec {
           ;
       };
       modules = [
+        usersConfigs
         config
         outputs.nixosModules.default
       ];
