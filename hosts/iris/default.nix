@@ -15,6 +15,7 @@
 
   myNixOS = {
     openssh.enable = true;
+    home-asistant.enable = true;
   };
 
   # JUST FOR TESTING!
