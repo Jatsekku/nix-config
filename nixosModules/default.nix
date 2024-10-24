@@ -21,6 +21,7 @@
     ./kitty.nix
     ./nh.nix
     ./nix.nix
+    ./openssh.nix
     ./virtualization
     ./wofi.nix
   ];
@@ -33,6 +34,7 @@
     hyprland.enable = lib.mkDefault true;
     kitty.enable = lib.mkDefault false;
     nh.enable = lib.mkDefault true;
+    openssh.enable = lib.mkDefault false;
     docker.enable = lib.mkDefault false;
     wofi.enable = lib.mkDefault false;
   };
