@@ -9,6 +9,10 @@
   ...
 }:
 {
+  imports = [
+    ./hyprland.nix
+  ];
+
   home = {
     stateVersion = "23.11";
   };
