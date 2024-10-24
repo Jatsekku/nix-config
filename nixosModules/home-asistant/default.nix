@@ -11,5 +11,6 @@
 {
   imports = [
     ./home-asistant.nix
+    ./zigbee.nix
   ];
 }

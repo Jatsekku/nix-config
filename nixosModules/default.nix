@@ -32,7 +32,10 @@
     git.enable = lib.mkDefault true;
     grub.enable = lib.mkDefault true;
     home-manager.enable = lib.mkDefault true;
-    home-asistant.enable = lib.mkDefault false;
+    home-asistant = {
+      enable = lib.mkDefault false;
+      zigbee.enable = lib.mkDefault false;
+    };
     hyprland.enable = lib.mkDefault true;
     kitty.enable = lib.mkDefault false;
     nh.enable = lib.mkDefault true;
