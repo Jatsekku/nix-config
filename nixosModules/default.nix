@@ -17,6 +17,7 @@
     ./git.nix
     ./grub.nix
     ./home-manager.nix
+    ./home-asistant
     ./hyprland
     ./kitty.nix
     ./nh.nix
@@ -31,6 +32,7 @@
     git.enable = lib.mkDefault true;
     grub.enable = lib.mkDefault true;
     home-manager.enable = lib.mkDefault true;
+    home-asistant.enable = lib.mkDefault false;
     hyprland.enable = lib.mkDefault true;
     kitty.enable = lib.mkDefault false;
     nh.enable = lib.mkDefault true;
