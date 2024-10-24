@@ -15,7 +15,10 @@
 
   myNixOS = {
     openssh.enable = true;
-    home-asistant.enable = true;
+    home-asistant = {
+      enable = true;
+      zigbee.enable = true;
+    };
   };
 
   # JUST FOR TESTING!
