@@ -12,6 +12,7 @@
   imports = [
     ./git.nix
     ./fzf.nix
+    ./kitty.nix
     ./obsidian.nix
     ./vscode.nix
     ./wofi.nix
@@ -25,6 +26,7 @@
   myHomeManager = {
     git.enable = lib.mkDefault true;
     fzf.enable = lib.mkDefault true;
+    kitty.enable = lib.mkDefault false;
     obsidian.enable = lib.mkDefault false;
     vscode.enable = lib.mkDefault false;
     wofi.enable = lib.mkDefault false;
