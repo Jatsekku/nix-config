@@ -24,5 +24,6 @@
 
   myHomeManager = {
     fzf.enable = true;
+    obsidian.enable = true;
   };
 }
