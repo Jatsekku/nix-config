@@ -17,6 +17,11 @@
     openssh.enable = true;
   };
 
+  # JUST FOR TESTING!
+  services.openssh.settings = {
+    PasswordAuthentication = true;
+  };
+
   networking.hostName = "iris";
   networking.hostId = "0F0F0F02";
   system.stateVersion = "23.11";
