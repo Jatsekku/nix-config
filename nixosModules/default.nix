@@ -18,6 +18,7 @@
     ./grub.nix
     ./home-manager.nix
     ./hyprland
+    ./kitty.nix
     ./nh.nix
     ./nix.nix
     ./virtualization
