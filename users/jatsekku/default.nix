@@ -26,5 +26,6 @@
     git.enable = true;
     fzf.enable = true;
     obsidian.enable = true;
+    vscode.enable = true;
   };
 }
