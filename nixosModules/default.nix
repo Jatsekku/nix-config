@@ -13,6 +13,7 @@
     inputs.disko.nixosModules.default
     inputs.home-manager.nixosModules.default
     inputs.hyprland.nixosModules.default
+    ./chromium.nix
     ./git.nix
     ./grub.nix
     ./home-manager.nix
