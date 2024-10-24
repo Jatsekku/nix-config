@@ -13,6 +13,10 @@
     ./hardware-configuration.nix
   ];
 
+  myNixOS = {
+    chromium.enable = true;
+  };
+
   networking.hostName = "anemone";
   networking.hostId = "0F0F0F01";
   system.stateVersion = "23.11";
