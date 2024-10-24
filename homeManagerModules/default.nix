@@ -14,6 +14,7 @@
     ./fzf.nix
     ./obsidian.nix
     ./vscodium.nix
+    ./wofi.nix
   ];
 
   home = {
@@ -26,5 +27,6 @@
     fzf.enable = lib.mkDefault true;
     obsidian.enable = lib.mkDefault false;
     vscodium.enable = lib.mkDefault false;
+    wofi.enable = lib.mkDefault false;
   };
 }
