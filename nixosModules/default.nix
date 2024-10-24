@@ -22,5 +22,6 @@
     ./nh.nix
     ./nix.nix
     ./virtualization
+    ./wofi.nix
   ];
 }
