@@ -22,6 +22,7 @@
     ./nh.nix
     ./nix.nix
     ./virtualization
+    ./wofi.nix
   ];
 
   myNixOS = {
@@ -33,5 +34,6 @@
     kitty.enable = lib.mkDefault false;
     nh.enable = lib.mkDefault true;
     docker.enable = lib.mkDefault false;
+    wofi.enable = lib.mkDefault false;
   };
 }
