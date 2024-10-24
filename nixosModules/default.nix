@@ -21,6 +21,7 @@
     ./kitty.nix
     ./nh.nix
     ./nix.nix
+    ./openssh.nix
     ./virtualization
     ./wofi.nix
   ];
