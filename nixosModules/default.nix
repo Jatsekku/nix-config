@@ -17,6 +17,7 @@
     ./git.nix
     ./grub.nix
     ./home-manager.nix
+    ./home-assistant
     ./hyprland
     ./kitty.nix
     ./nh.nix
