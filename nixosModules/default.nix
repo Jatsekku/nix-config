@@ -18,6 +18,7 @@
     ./grub.nix
     ./home-manager.nix
     ./hyprland
+    ./kitty.nix
     ./nh.nix
     ./nix.nix
     ./virtualization
@@ -29,6 +30,7 @@
     grub.enable = lib.mkDefault true;
     home-manager.enable = lib.mkDefault true;
     hyprland.enable = lib.mkDefault true;
+    kitty.enable = lib.mkDefault false;
     nh.enable = lib.mkDefault true;
     docker.enable = lib.mkDefault false;
   };
