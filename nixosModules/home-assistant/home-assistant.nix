@@ -33,5 +33,7 @@ in
         scene = "!include scenes.yaml";
       };
     };
+
+    networking.firewall.allowedTCPPorts = [ 8123 ];
   };
 }
