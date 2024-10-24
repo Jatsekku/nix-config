@@ -33,6 +33,11 @@
           config = ./users/jatsekku;
           platform = "x86_64-linux";
         };
+
+        "jatsekku@iris" = {
+          config = ./users/jatsekku;
+          platform = "x86_64-linux";
+        };
       };
 
       # Configure nix fmt
