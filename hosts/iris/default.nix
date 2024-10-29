@@ -15,6 +15,7 @@
 
   myNixOS = {
     openssh.enable = true;
+    mosquitto.enable = true;
     home-assistant = {
       enable = true;
       zigbee.useZ2M = true;
