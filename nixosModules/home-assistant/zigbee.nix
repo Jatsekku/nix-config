@@ -14,14 +14,43 @@ in
       default = false;
       description = "Enable ZHA support for home-assistant";
     };
-  };
-
-  config = lib.mkIf (ha-enabled && cfg.useZHA) {
-    # ZHA component for HA
-    services.home-assistant = {
-      extraComponents = [
-        "zha"
-      ];
+    useZ2M = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+      description = "Enable Z2M support for home-assistant";
+    };
+    adapterPort = lib.mkOption {
+      type = lib.types.str;
+      default = "/dev/ttyUSB0";
     };
   };
+
+  config = lib.mkIf ha-enabled (
+    lib.mkMerge [
+      (lib.mkIf cfg.useZHA {
+        # ZHA component for HA
+        services.home-assistant = {
+          extraComponents = [
+            "zha"
+          ];
+        };
+      })
+
+      (lib.mkIf cfg.useZ2M {
+        services.zigbee2mqtt = {
+          enable = true;
+          settings = {
+            #homeassistant = true;
+            serial.port = cfg.adapterPort;
+            permit_join = true;
+            mqtt = {
+              server = "mqtt://localhost";
+              user = "zigbee2mqtt";
+              password = "test";
+            };
+          };
+        };
+      })
+    ]
+  );
 }
