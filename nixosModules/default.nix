@@ -20,6 +20,7 @@
     ./home-assistant
     ./hyprland
     ./kitty.nix
+    ./mosquitto.nix
     ./nh.nix
     ./nix.nix
     ./openssh.nix
