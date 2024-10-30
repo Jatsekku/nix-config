@@ -16,6 +16,7 @@
     ./chromium.nix
     ./git.nix
     ./gnome
+    ./grim.nix
     ./grub.nix
     ./home-manager.nix
     ./home-assistant
