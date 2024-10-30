@@ -1,0 +1,20 @@
+name: Enforce conventional commit messages with commitlint
+
+# Trigger on every pull_request or push
+on:
+  - pull_request
+  - push
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    # Checkout repository code to runner
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # Run commitlint
+    - name: Run commitlint
+      uses: wagoid/commitlint-github-action@v6
