@@ -15,6 +15,7 @@
 
   myNixOS = {
     chromium.enable = true;
+    docker.enable = true;
   };
 
   networking.hostName = "anemone";
