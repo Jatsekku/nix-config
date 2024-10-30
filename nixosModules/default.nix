@@ -22,6 +22,7 @@
     ./home-assistant
     ./hyprland
     ./kitty.nix
+    ./loupe.nix
     ./mosquitto.nix
     ./nh.nix
     ./nix.nix
