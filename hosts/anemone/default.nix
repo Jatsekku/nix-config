@@ -20,6 +20,7 @@
     gnome-disk.enable = true;
     grim.enable = true;
     slurp.enable = true;
+    loupe.enable = true;
   };
 
   networking.hostName = "anemone";
