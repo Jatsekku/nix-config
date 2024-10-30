@@ -16,6 +16,7 @@
   myNixOS = {
     chromium.enable = true;
     docker.enable = true;
+    virt-manager.enable = true;
   };
 
   networking.hostName = "anemone";
