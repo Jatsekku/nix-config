@@ -27,6 +27,7 @@
     ./nix.nix
     ./openssh.nix
     ./polkit.nix
+    ./slurp.nix
     ./virtualization
     ./wofi.nix
   ];
