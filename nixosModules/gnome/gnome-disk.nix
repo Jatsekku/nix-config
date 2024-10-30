@@ -18,7 +18,6 @@ in
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = [
-      # Add gnome disk utility package
       pkgs.gnome-disk-utility
     ];
   };
