@@ -19,6 +19,7 @@
     virt-manager.enable = true;
     gnome-disk.enable = true;
     grim.enable = true;
+    slurp.enable = true;
   };
 
   networking.hostName = "anemone";
