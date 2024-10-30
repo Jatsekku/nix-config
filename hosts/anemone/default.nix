@@ -18,6 +18,7 @@
     docker.enable = true;
     virt-manager.enable = true;
     gnome-disk.enable = true;
+    grim.enable = true;
   };
 
   networking.hostName = "anemone";
