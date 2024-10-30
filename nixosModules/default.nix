@@ -15,6 +15,7 @@
     inputs.hyprland.nixosModules.default
     ./chromium.nix
     ./git.nix
+    ./gnome
     ./grub.nix
     ./home-manager.nix
     ./home-assistant
