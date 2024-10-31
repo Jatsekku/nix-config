@@ -51,6 +51,8 @@
           "DP-5,1920x1080@60,1920x0,1,transform,2"
         ];
 
+        env = [ "AQ_DRM_DEVICES,/dev/dri/card2:/dev/dri/card1" ];
+
         input = {
           kb_layout = "pl";
         };
