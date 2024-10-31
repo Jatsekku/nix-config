@@ -28,6 +28,7 @@
     ./nix.nix
     ./openssh.nix
     ./polkit.nix
+    ./sddm
     ./slurp.nix
     ./virtualization
     ./wofi.nix
