@@ -14,6 +14,7 @@
     inputs.home-manager.nixosModules.default
     inputs.hyprland.nixosModules.default
     ./chromium.nix
+    ./conan.nix
     ./git.nix
     ./gnome
     ./grim.nix
