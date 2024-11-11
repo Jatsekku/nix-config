@@ -20,6 +20,7 @@
     gnome-disk.enable = true;
     grim.enable = true;
     slurp.enable = true;
+    kicad.enable = true;
     loupe.enable = true;
   };
 
