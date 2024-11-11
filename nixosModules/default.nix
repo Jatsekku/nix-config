@@ -22,6 +22,7 @@
     ./home-manager.nix
     ./home-assistant
     ./hyprland
+    ./kicad.nix
     ./kitty.nix
     ./loupe.nix
     ./mosquitto.nix
