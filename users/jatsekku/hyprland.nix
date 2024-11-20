@@ -65,6 +65,9 @@
           # Open program launcher
           "${mod}, O, exec, ${menu}"
 
+          # Selective screenshot
+          ''${mod}, S, exec, grim -g "$(slurp)" - | wl-copy''
+
           # Windows managmenet
           # Close active window
           "${mod}, C, killactive"
