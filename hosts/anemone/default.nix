@@ -22,6 +22,7 @@
     slurp.enable = true;
     kicad.enable = true;
     loupe.enable = true;
+    wl-clipboard.enable = true;
   };
 
   networking.hostName = "anemone";
