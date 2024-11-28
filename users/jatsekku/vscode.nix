@@ -13,6 +13,7 @@
     with pkgs.vscode-extensions;
     [
       ms-azuretools.vscode-docker
+      vscodevim.vim
     ]
     ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
