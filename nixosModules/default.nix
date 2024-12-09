@@ -33,6 +33,7 @@
     ./sddm
     ./slurp.nix
     ./virtualization
+    ./wireshark.nix
     ./wl-clipboard.nix
     ./wofi.nix
   ];
