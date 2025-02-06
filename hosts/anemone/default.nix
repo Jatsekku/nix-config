@@ -24,6 +24,7 @@
     loupe.enable = true;
     wireshark.enable = true;
     wl-clipboard.enable = true;
+    waypipe.enable = true;
   };
 
   networking.hostName = "anemone";
