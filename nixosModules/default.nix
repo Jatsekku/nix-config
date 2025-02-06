@@ -37,5 +37,6 @@
     ./wireshark.nix
     ./wl-clipboard.nix
     ./wofi.nix
+    ./waypipe.nix
   ];
 }
