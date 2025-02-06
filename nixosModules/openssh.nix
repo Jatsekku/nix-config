@@ -18,5 +18,9 @@ in
   config = lib.mkIf cfg.enable {
     # Eable openssh service
     services.openssh.enable = true;
+    services.openssh.settings = {
+      # Allow X11 forwarding
+      X11Forwarding = true;
+    };
   };
 }
