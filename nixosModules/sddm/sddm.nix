@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 let
@@ -13,13 +14,22 @@ in
       default = false;
       description = "Enable SDDM";
     };
+    sessionType = lib.mkOption {
+      type = lib.types.enum [
+        "x11"
+        "wayland"
+      ];
+      default = "wayland";
+      description = "Choose between X11 or Wayland for SDDM";
+    };
   };
 
   config = lib.mkIf cfg.enable {
     services.displayManager.sddm = {
       enable = true;
       theme = "${import ./themes/sddm-sugar-dark.nix { inherit pkgs; }}";
-      wayland.enable = true;
+      # Apply only if wayland has been requested
+      wayland.enable = cfg.sessionType == "wayland";
     };
 
     # Needed for SDDM theming
