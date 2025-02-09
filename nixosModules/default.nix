@@ -38,5 +38,6 @@
     ./wl-clipboard.nix
     ./wofi.nix
     ./waypipe.nix
+    ./ripgrep.nix
   ];
 }
