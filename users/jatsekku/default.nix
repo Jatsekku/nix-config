@@ -10,6 +10,8 @@
 }:
 {
   imports = [
+    ./nixvim
+
     ./hyprland.nix
     ./vscode.nix
   ];
