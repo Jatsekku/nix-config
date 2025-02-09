@@ -9,9 +9,7 @@
   ...
 }:
 {
-  imports = [
-    ./lualine.nix
-    ./telescope.nix
-    ./treesitter.nix
-  ];
+  programs.nixvim.plugins.treesitter = {
+    enable = true;
+  };
 }
