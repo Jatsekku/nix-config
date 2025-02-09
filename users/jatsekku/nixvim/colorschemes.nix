@@ -24,7 +24,7 @@
     #modus.enable = true;
     #monokai-pro.enable = true;
     #nightfox.enable = true;
-    #nord.enable = true;
+    nord.enable = true;
     #one.enable = true;
     #onedark.enable = true;
     #oxocarbon.enable = true;
