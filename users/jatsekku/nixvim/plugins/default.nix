@@ -9,9 +9,7 @@
   ...
 }:
 {
-  imports =
-    [
-      ./colorschemes.nix
-      ./plugins
-    ];
+  imports = [
+    ./lualine.nix
+  ];
 }

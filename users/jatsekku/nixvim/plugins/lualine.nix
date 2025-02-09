@@ -9,9 +9,7 @@
   ...
 }:
 {
-  imports =
-    [
-      ./colorschemes.nix
-      ./plugins
-    ];
+  programs.nixvim.plugins.lualine = {
+    enable = true;
+  };
 }
