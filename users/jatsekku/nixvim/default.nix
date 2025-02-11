@@ -9,9 +9,9 @@
   ...
 }:
 {
-  imports =
-    [
-      ./colorschemes.nix
-      ./plugins
-    ];
+  imports = [
+    ./colorschemes.nix
+    ./keymaps.nix
+    ./plugins
+  ];
 }
