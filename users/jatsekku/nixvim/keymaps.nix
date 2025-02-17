@@ -22,6 +22,8 @@ in
     keymaps = [
       (mkKeyMap "n" "<leader>ff" "Telescope find_files" "Find file (Telescope)")
       (mkKeyMap "n" "<leader>fg" "Telescope live_grep" "Live grep (Telescope)")
+
+      (mkKeyMap "n" "<leader>t" "Neotree toggle" "Toggle file-tree (Neotree)")
     ];
   };
 }
