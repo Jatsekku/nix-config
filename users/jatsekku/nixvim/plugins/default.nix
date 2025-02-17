@@ -11,6 +11,7 @@
 {
   imports = [
     ./lualine.nix
+    ./lsp.nix
     ./neo-tree.nix
     ./telescope.nix
     ./treesitter.nix
