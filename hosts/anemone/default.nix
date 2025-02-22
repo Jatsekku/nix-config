@@ -13,6 +13,8 @@
     ./hardware-configuration.nix
   ];
 
+  facter.reportPath = ./facter.json;
+
   myNixOS = {
     calibre.enable = true;
     chromium.enable = true;
