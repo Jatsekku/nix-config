@@ -13,6 +13,8 @@
     ./hardware-configuration.nix
   ];
 
+  facter.reportPath = ./facter.json;
+
   myNixOS = {
     chromium.enable = true;
     openssh.enable = true;
