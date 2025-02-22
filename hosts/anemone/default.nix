@@ -14,6 +14,7 @@
   ];
 
   myNixOS = {
+    calibre.enable = true;
     chromium.enable = true;
     docker.enable = true;
     virt-manager.enable = true;
