@@ -16,6 +16,8 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
 
+    nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
+
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";

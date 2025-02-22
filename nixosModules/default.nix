@@ -13,6 +13,7 @@
     inputs.disko.nixosModules.default
     inputs.home-manager.nixosModules.default
     inputs.hyprland.nixosModules.default
+    inputs.nixos-facter-modules.nixosModules.facter
     ./calibre.nix
     ./chromium.nix
     ./conan.nix
