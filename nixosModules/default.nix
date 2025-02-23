@@ -27,6 +27,7 @@
     ./kde
     ./kicad.nix
     ./kitty.nix
+    ./kodi.nix
     ./loupe.nix
     ./mosquitto.nix
     ./nh.nix
