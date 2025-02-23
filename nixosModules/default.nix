@@ -28,6 +28,7 @@
     ./kicad.nix
     ./kitty.nix
     ./kodi.nix
+    ./libreoffice.nix
     ./loupe.nix
     ./mosquitto.nix
     ./nh.nix
