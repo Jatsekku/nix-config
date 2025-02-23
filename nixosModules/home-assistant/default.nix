@@ -11,6 +11,7 @@
 {
   imports = [
     ./home-assistant.nix
+    ./wyoming.nix
     ./zigbee.nix
   ];
 }
