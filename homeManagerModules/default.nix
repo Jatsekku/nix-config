@@ -18,6 +18,7 @@
     ./obsidian.nix
     ./vscode.nix
     ./wofi.nix
+    ./zsh.nix
   ];
 
   home = {
