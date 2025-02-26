@@ -43,5 +43,6 @@
     ./wofi.nix
     ./waypipe.nix
     ./ripgrep.nix
+    ./zsh.nix
   ];
 }
