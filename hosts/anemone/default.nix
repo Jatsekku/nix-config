@@ -24,6 +24,7 @@
     grim.enable = true;
     slurp.enable = true;
     kicad.enable = true;
+    libreoffice.enable = true;
     loupe.enable = true;
     wireshark.enable = true;
     wl-clipboard.enable = true;
