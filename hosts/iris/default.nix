@@ -17,6 +17,7 @@
 
   myNixOS = {
     chromium.enable = true;
+    kodi.enable = true;
     openssh.enable = true;
     mosquitto.enable = true;
     home-assistant = {
