@@ -26,6 +26,7 @@
     };
     sddm.enable = true;
     waypipe.enable = true;
+    zsh.enable = true;
   };
 
   # JUST FOR TESTING!
