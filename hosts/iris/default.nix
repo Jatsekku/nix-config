@@ -32,6 +32,7 @@
     };
     sddm.enable = true;
     waypipe.enable = true;
+    wayvnc.enable = true;
     zsh.enable = true;
   };
 
