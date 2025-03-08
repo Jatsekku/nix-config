@@ -26,6 +26,7 @@
     kicad.enable = true;
     libreoffice.enable = true;
     loupe.enable = true;
+    nerdfonts.enable = true;
     wireshark.enable = true;
     wl-clipboard.enable = true;
     waypipe.enable = true;
