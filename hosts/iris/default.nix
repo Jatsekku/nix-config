@@ -23,6 +23,7 @@
       enable = true;
       zigbee.useZ2M = true;
       zigbee.adapterPort = "/dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_a8fe3a457245ed118bfec68f0a86e0b4-if00-port0";
+      wyoming.enable = true;
     };
     sddm.enable = true;
     waypipe.enable = true;
