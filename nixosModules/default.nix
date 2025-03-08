@@ -38,6 +38,7 @@
     ./polkit.nix
     ./sddm
     ./slurp.nix
+    ./tree.nix
     ./virtualization
     ./wayvnc.nix
     ./wireshark.nix
