@@ -30,6 +30,7 @@
     wireshark.enable = true;
     wl-clipboard.enable = true;
     waypipe.enable = true;
+    tree.enable = true;
     zsh.enable = true;
   };
 
