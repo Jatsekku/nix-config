@@ -45,6 +45,7 @@
     ./wl-clipboard.nix
     ./wofi.nix
     ./waypipe.nix
+    ./remmina.nix
     ./ripgrep.nix
     ./zsh.nix
   ];
