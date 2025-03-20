@@ -32,6 +32,7 @@
     waypipe.enable = true;
     tree.enable = true;
     zsh.enable = true;
+    remmina.enable = true;
   };
 
   networking.hostName = "anemone";
