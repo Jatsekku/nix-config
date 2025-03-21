@@ -28,6 +28,9 @@ in
 
       # Do not install grub on any device
       grub.device = "nodev";
+
+      # Autodetect other systems
+      grub.useOSProber = true;
     };
   };
 }
