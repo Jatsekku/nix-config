@@ -42,5 +42,6 @@
       enable = true;
       useAsDefault = true;
     };
+    udiskie.enable = true;
   };
 }
