@@ -35,6 +35,7 @@
     ./nh.nix
     ./nix.nix
     ./openssh.nix
+    ./pixiecore.nix
     ./polkit.nix
     ./sddm
     ./slurp.nix
