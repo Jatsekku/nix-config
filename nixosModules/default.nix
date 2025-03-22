@@ -31,6 +31,7 @@
     ./libreoffice.nix
     ./loupe.nix
     ./mosquitto.nix
+    ./netbootxyz
     ./nerdfonts.nix
     ./nh.nix
     ./nix.nix
