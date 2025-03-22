@@ -17,6 +17,7 @@
     ./nixvim.nix
     ./obsidian.nix
     ./vscode.nix
+    ./udiskie.nix
     ./wofi.nix
     ./zsh.nix
   ];
