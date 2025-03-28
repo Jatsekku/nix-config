@@ -38,6 +38,7 @@
     ./openssh.nix
     ./pixiecore.nix
     ./polkit.nix
+    ./samba.nix
     ./sddm
     ./slurp.nix
     ./tree.nix
