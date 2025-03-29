@@ -34,7 +34,10 @@
   nixpkgs.config.allowUnfree = true;
 
   myHomeManager = {
-    git.enable = true;
+    git = {
+      enable = true;
+      lfs = true;
+    };
     fzf.enable = true;
     obsidian.enable = true;
     vscode.enable = true;
