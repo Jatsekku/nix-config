@@ -24,6 +24,13 @@
     };
     openssh.enable = true;
     mosquitto.enable = true;
+    netbootxyz = {
+      enable = true;
+      liveEndpoint = "http://192.168.0.140:8080";
+      winBaseUrl = "http://192.168.0.140:8080/WinPE";
+      sambaShare.enable = true;
+      dhcpProxy = true;
+    };
     home-assistant = {
       enable = true;
       zigbee.useZ2M = true;
