@@ -14,6 +14,7 @@
     inputs.home-manager.nixosModules.default
     inputs.hyprland.nixosModules.default
     inputs.nixos-facter-modules.nixosModules.facter
+    inputs.nixvirt.nixosModules.default
     ./calibre.nix
     ./chromium.nix
     ./conan.nix
@@ -35,6 +36,7 @@
     ./nerdfonts.nix
     ./nh.nix
     ./nix.nix
+    ./nixvirt.nix
     ./openssh.nix
     ./pixiecore.nix
     ./polkit.nix
