@@ -52,6 +52,10 @@
         };
       };
 
+      vmConfigurations = {
+        win10-hwa = ./hosts/vms/win10-hwa;
+      };
+
       # Configure nix fmt
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
 
