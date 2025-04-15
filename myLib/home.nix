@@ -17,6 +17,7 @@ rec {
     {
       config,
       username,
+      hostname,
       platform,
     }:
     inputs.home-manager.lib.homeManagerConfiguration {
@@ -27,6 +28,7 @@ rec {
           outputs
           myLib
           username
+          hostname
           ;
       };
       modules = [
@@ -52,9 +54,15 @@ rec {
       { config, platform }:
       let
         username = builtins.elemAt (builtins.split "@" userAtHost) 0;
+        hostname = builtins.elemAt (builtins.split "@" userAtHost) 2;
       in
       myLib.mkHome {
-        inherit config username platform;
+        inherit
+          config
+          username
+          hostname
+          platform
+          ;
       }
     ) configurations;
 }
