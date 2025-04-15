@@ -13,6 +13,12 @@ in
       default = false;
       description = "Enable hyprland";
     };
+
+    hostSettings = lib.mkOption {
+      type = lib.types.attrs;
+      default = { };
+      description = "Host specific settings for hyprland";
+    };
   };
 
   config = lib.mkIf cfg.enable {
