@@ -11,6 +11,7 @@
   imports = [
     ./disko.nix
     ./hardware-configuration.nix
+    ./hyprland.nix
   ];
 
   facter.reportPath = ./facter.json;
