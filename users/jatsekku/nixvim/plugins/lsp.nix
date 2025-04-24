@@ -18,7 +18,11 @@
         bashls.enable = true;
         clangd.enable = true;
         nil_ls.enable = true;
-        rust-analyzer.enable = true;
+        rust_analyzer = {
+          enable = true;
+          installCargo = true;
+          installRustc = true;
+        };
       };
     };
   };
