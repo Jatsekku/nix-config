@@ -19,6 +19,7 @@
     ./vscode.nix
     ./udiskie.nix
     ./wofi.nix
+    ./zellij.nix
     ./zsh.nix
   ];
 
