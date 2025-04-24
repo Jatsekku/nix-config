@@ -49,6 +49,7 @@
     ./wireshark.nix
     ./wl-clipboard.nix
     ./wofi.nix
+    ./vfio.nix
     ./waypipe.nix
     ./remmina.nix
     ./ripgrep.nix
