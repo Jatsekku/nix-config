@@ -15,5 +15,6 @@
     ./neo-tree.nix
     ./telescope.nix
     ./treesitter.nix
+    ./web-devicons.nix
   ];
 }
