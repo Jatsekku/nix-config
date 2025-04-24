@@ -6,8 +6,12 @@
   outputs,
   myLib,
   username,
+  hostname,
   ...
 }:
+let
+  hostSettings = outputs.nixosConfigurations.${hostname}.config.myNixOS.hyprland.hostSettings;
+in
 {
   myHomeManager = {
     kitty.enable = true;
@@ -27,31 +31,11 @@
     in
     {
       enable = true;
-      settings = {
+      settings = hostSettings // {
 
         workspace = [
           "1, monitor:DP-4"
         ];
-
-        # Monitors config
-        monitor = [
-          # 1 Screen: 
-          # "DP-4" -> Display port #4, 
-          # "1920x1080@60 -> Resolution: 1920 x 1080, Refreshing 60Hz
-          # "0x0" -> Postion (x,y) : 0,0
-          # "1" -> No scaling 
-          "DP-4,1920x1080@60,0x0,1"
-
-          # 2 Screen: 
-          # "DP-4" -> Display port #4, 
-          # "1920x1080@60 -> Resolution: 1920 x 1080, Refreshing 60Hz
-          # "0x0" -> Postion (x,y) : 0,0
-          # "1" -> No scaling
-          # "transform,2" -> Rotation 180 degrees
-          "DP-5,1920x1080@60,1920x0,1,transform,2"
-        ];
-
-        env = [ "AQ_DRM_DEVICES,/dev/dri/card2:/dev/dri/card1" ];
 
         input = {
           kb_layout = "pl";
