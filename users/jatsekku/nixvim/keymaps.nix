@@ -24,6 +24,52 @@ in
       (mkKeyMap "n" "<leader>fg" "Telescope live_grep" "Live grep (Telescope)")
 
       (mkKeyMap "n" "<leader>t" "Neotree toggle" "Toggle file-tree (Neotree)")
+
+      {
+        action = ":lua vim.lsp.buf.code_action()<cr>";
+        key = "<leader>ca";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Select code action";
+        };
+      }
+      {
+        action = ":lua vim.lsp.buf.definition()<cr>";
+        key = "<leader>gd";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Go to symbol definition (LSP)";
+        };
+      }
+      {
+        action = ":lua vim.lsp.buf.hover()<cr>";
+        key = "K";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Display symbol information (LSP)";
+        };
+      }
+      {
+        action = ":lua vim.lsp.buf.references()<cr>";
+        key = "<leader>gr";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Go to symbol references (LSP)";
+        };
+      }
+      {
+        action = ":lua vim.lsp.buf.format()<cr>";
+        key = "<leader>gf";
+        options = {
+          silent = true;
+          noremap = true;
+          desc = "Format buffer (LSP)";
+        };
+      }
     ];
   };
 }
