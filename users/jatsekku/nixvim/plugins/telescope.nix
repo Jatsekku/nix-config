@@ -9,9 +9,19 @@
   ...
 }:
 {
-  programs.nixvim.plugins.telescope = {
-    enable = true;
+  programs.nixvim = {
+    extraPlugins = with pkgs.vimPlugins; [
+      telescope-ui-select-nvim
+    ];
 
-    extensions.fzf-native.enable = true;
+    plugins.telescope = {
+      enable = true;
+
+      extensions.fzf-native.enable = true;
+
+      enabledExtensions = [
+        "ui-select"
+      ];
+    };
   };
 }
