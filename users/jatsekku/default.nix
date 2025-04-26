@@ -46,5 +46,6 @@
       useAsDefault = true;
     };
     udiskie.enable = true;
+    zellij.enable = true;
   };
 }
