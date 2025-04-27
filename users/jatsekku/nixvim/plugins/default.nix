@@ -13,6 +13,7 @@
     ./lualine.nix
     ./lsp.nix
     ./neo-tree.nix
+    ./none-ls.nix
     ./telescope.nix
     ./treesitter.nix
     ./web-devicons.nix
