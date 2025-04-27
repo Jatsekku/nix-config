@@ -41,7 +41,7 @@
       #enable = true;
       wsdd = true;
     };
-    sddm.enable = true;
+    sddm.enable = false;
     waypipe.enable = true;
     wayvnc.enable = true;
     zsh.enable = true;
