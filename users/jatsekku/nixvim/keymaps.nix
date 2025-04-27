@@ -25,6 +25,8 @@ in
 
       (mkKeyMap "n" "<leader>t" "Neotree toggle" "Toggle file-tree (Neotree)")
 
+      (mkKeyMap "n" "<leader>?" "WhichKey" "Show keymaps binding (which-key)")
+
       {
         action = ":lua vim.lsp.buf.code_action()<cr>";
         key = "<leader>ca";
