@@ -25,6 +25,7 @@
     ./home-manager.nix
     ./home-assistant
     ./hyprland
+    ./jupyterlab.nix
     ./kde
     ./kicad.nix
     ./kitty.nix
