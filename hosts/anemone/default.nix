@@ -17,6 +17,15 @@
   facter.reportPath = ./facter.json;
 
   myNixOS = {
+    brother-scanner = {
+      enable = true;
+      netDevices = {
+        home = {
+          model = "DCP-1610WE";
+          ip = "192.168.0.222";
+        };
+      };
+    };
     calibre.enable = true;
     chromium.enable = true;
     docker.enable = true;
