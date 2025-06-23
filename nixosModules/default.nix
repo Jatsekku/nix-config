@@ -51,6 +51,7 @@
     ./wireshark.nix
     ./wl-clipboard.nix
     ./wofi.nix
+    ./vlc.nix
     ./vfio.nix
     ./waypipe.nix
     ./remmina.nix
