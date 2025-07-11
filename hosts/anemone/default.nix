@@ -41,6 +41,7 @@
     wireshark.enable = true;
     wl-clipboard.enable = true;
     waypipe.enable = true;
+    vlc.enable = true;
     tree.enable = true;
     zsh.enable = true;
     remmina.enable = true;
