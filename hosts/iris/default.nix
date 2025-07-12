@@ -14,6 +14,7 @@
   ];
 
   facter.reportPath = ./facter.json;
+  services.getty.autologinUser = "nari";
 
   myNixOS = {
     chromium.enable = true;
