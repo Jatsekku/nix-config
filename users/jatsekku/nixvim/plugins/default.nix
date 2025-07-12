@@ -10,6 +10,7 @@
 }:
 {
   imports = [
+    ./cmp.nix
     ./lualine.nix
     ./lsp.nix
     ./neo-tree.nix
