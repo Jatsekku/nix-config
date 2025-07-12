@@ -50,6 +50,11 @@
           config = ./users/jatsekku;
           platform = "x86_64-linux";
         };
+
+        "nari@iris" = {
+          config = ./users/nari-bot;
+          platform = "x86_64-linux";
+        };
       };
 
       vmConfigurations = {
