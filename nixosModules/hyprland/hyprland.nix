@@ -27,6 +27,8 @@ in
       enable = true;
       # Enable XWaylad support
       xwayland.enable = true;
+      # Enable UWSM support
+      withUWSM = true;
     };
   };
 }
