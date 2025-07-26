@@ -10,6 +10,7 @@
 }:
 {
   imports = [
+    inputs.bash-logger.nixosModules.default
     inputs.disko.nixosModules.default
     inputs.home-manager.nixosModules.default
     inputs.hyprland.nixosModules.default

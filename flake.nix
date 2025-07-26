@@ -2,6 +2,11 @@
   description = "NixOS config flake";
 
   inputs = {
+    bash-logger = {
+      url = "github:Jatsekku/bash-logger";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     disko = {
