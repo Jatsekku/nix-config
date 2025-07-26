@@ -13,6 +13,10 @@
     ./hardware-configuration.nix
   ];
 
+  programs.bash-logger = {
+    enable = true;
+    createEtcSymlink = true;
+  };
   facter.reportPath = ./facter.json;
   services.getty.autologinUser = "nari";
 
