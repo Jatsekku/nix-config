@@ -32,7 +32,5 @@ in
         plugins = [ "git" ];
       };
     };
-
-    myUserManager.${username}.shell = pkgs.zsh;
   };
 }

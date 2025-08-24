@@ -10,7 +10,6 @@
 }:
 {
   imports = [
-    inputs.nixvim.homeManagerModules.default
     ./git.nix
     ./fzf.nix
     ./kitty.nix
@@ -22,11 +21,6 @@
     ./zellij.nix
     ./zsh.nix
   ];
-
-  home = {
-    inherit username;
-    homeDirectory = "/home/${username}";
-  };
 
   myHomeManager = {
     git.enable = lib.mkDefault true;

@@ -10,7 +10,7 @@
   ...
 }:
 let
-  hostSettings = outputs.nixosConfigurations.${hostname}.config.myNixOS.hyprland.hostSettings;
+  hostSettings = inputs.self.nixosConfigurations.${hostname}.config.myNixOS.hyprland.hostSettings;
 in
 {
   myHomeManager = {

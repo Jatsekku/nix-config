@@ -1,6 +1,8 @@
 {
   config,
+  inputs,
   lib,
+  hostname,
   ...
 }:
 let
@@ -19,6 +21,10 @@ in
     home-manager = {
       useGlobalPkgs = true;
       useUserPackages = true;
+      sharedModules = [
+        inputs.self.homeManagerModules.default
+      ];
+      extraSpecialArgs = { inherit inputs hostname; };
     };
   };
 }

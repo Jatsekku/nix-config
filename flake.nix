@@ -40,25 +40,30 @@
       myLib = import ./myLib/default.nix { inherit inputs; };
     in
     {
+
       nixosConfigurations = myLib.mkSystemsConfigurations {
-        anemone = ./hosts/anemone;
-        iris = ./hosts/iris;
-      };
-
-      homeConfigurations = myLib.mkHomesConfigurations {
-        "jatsekku@anemone" = {
-          config = ./users/jatsekku;
+        anemone = {
+          config = ./hosts/anemone;
           platform = "x86_64-linux";
+          users = {
+            jatsekku = {
+              user = ./users/jatsekku/user.nix;
+              home = ./users/jatsekku/home.nix;
+            };
+          };
         };
 
-        "jatsekku@iris" = {
-          config = ./users/jatsekku;
+        iris = {
+          config = ./hosts/iris;
           platform = "x86_64-linux";
-        };
-
-        "nari@iris" = {
-          config = ./users/nari-bot;
-          platform = "x86_64-linux";
+          users = {
+            jatsekku = {
+              user = ./users/jatsekku/user.nix;
+            };
+            nari = {
+              user = ./users/nari-bot/user.nix;
+            };
+          };
         };
       };
 
@@ -71,6 +76,5 @@
 
       nixosModules.default = ./nixosModules;
       homeManagerModules.default = ./homeManagerModules;
-      userManager.default = ./userManager;
     };
 }

@@ -27,15 +27,6 @@ in
       pkgs.brscan4
     ];
 
-    # brscan4 is not FOSS
-    nixpkgs.config.allowUnfreePredicate =
-      pkg:
-      builtins.elem (lib.getName pkg) [
-        "brscan4"
-        "brother-udev-rule-type1"
-        "brscan4-etc-files"
-      ];
-
     hardware.sane = {
       enable = true;
       brscan4 = {
