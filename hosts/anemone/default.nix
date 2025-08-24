@@ -14,6 +14,11 @@
     ./hyprland.nix
   ];
 
+  programs.bash-logger = {
+    enable = true;
+    createEtcSymlink = true;
+  };
+
   facter.reportPath = ./facter.json;
 
   myNixOS = {
@@ -36,11 +41,19 @@
     jupyterlab.enable = true;
     kicad.enable = true;
     libreoffice.enable = true;
+    libvirt.enable = true;
     loupe.enable = true;
     nerdfonts.enable = true;
     wireshark.enable = true;
     wl-clipboard.enable = true;
     waypipe.enable = true;
+    vfio = {
+      enable = true;
+      devicesID = [
+        "0d:00.0"
+        "0d:00.1"
+      ];
+    };
     vlc.enable = true;
     tree.enable = true;
     zsh.enable = true;
