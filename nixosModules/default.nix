@@ -16,6 +16,7 @@
     inputs.hyprland.nixosModules.default
     inputs.nixos-facter-modules.nixosModules.facter
     inputs.nixvirt.nixosModules.default
+    ./brother-printer.nix
     ./brother-scanner.nix
     ./calibre.nix
     ./chromium.nix
