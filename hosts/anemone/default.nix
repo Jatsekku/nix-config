@@ -22,6 +22,7 @@
   facter.reportPath = ./facter.json;
 
   myNixOS = {
+    brother-printer.enable = true;
     brother-scanner = {
       enable = true;
       netDevices = {
