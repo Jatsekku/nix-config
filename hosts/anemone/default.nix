@@ -38,6 +38,7 @@
     gnome-disk.enable = true;
     grim.enable = true;
     slurp.enable = true;
+    sddm.enable = true;
     jupyterlab.enable = true;
     kicad.enable = true;
     libreoffice.enable = true;
