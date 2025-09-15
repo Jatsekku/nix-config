@@ -14,6 +14,7 @@
     inputs.disko.nixosModules.default
     inputs.home-manager.nixosModules.default
     inputs.hyprland.nixosModules.default
+    inputs.monitor-detector.nixosModules.default
     inputs.nixos-facter-modules.nixosModules.facter
     inputs.nixvirt.nixosModules.default
     ./brother-printer.nix

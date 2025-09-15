@@ -6,6 +6,7 @@
       url = "github:Jatsekku/bash-logger";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    monitor-detector.url = "github:Jatsekku/monitor-detector";
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
