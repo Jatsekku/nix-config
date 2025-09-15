@@ -17,6 +17,7 @@
     inputs.monitor-detector.nixosModules.default
     inputs.nixos-facter-modules.nixosModules.facter
     inputs.nixvirt.nixosModules.default
+    inputs.uwsm-launcher.nixosModules.default
     ./brother-printer.nix
     ./brother-scanner.nix
     ./calibre.nix

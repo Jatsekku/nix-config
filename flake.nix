@@ -7,6 +7,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     monitor-detector.url = "github:Jatsekku/monitor-detector";
+    uwsm-launcher.url = "github:Jatsekku/uwsm-launcher";
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
