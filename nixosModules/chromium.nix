@@ -14,10 +14,19 @@ in
       default = false;
       description = "Enable chromium";
     };
+    withWidevine = lib.mkEnableOption "Widevine support in chromium";
   };
 
   config = lib.mkIf cfg.enable {
-    # Add chromium package
-    environment.systemPackages = [ pkgs.chromium ];
+    environment.systemPackages = [
+      (
+        if cfg.withWidevine then
+          pkgs.chromium.override {
+            enableWideVine = true;
+          }
+        else
+          pkgs.chromium
+      )
+    ];
   };
 }
