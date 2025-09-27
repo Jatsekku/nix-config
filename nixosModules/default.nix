@@ -14,6 +14,7 @@
     inputs.disko.nixosModules.default
     inputs.home-manager.nixosModules.default
     inputs.hyprland.nixosModules.default
+    inputs.libvirt-hooks.nixosModules.default
     inputs.monitor-detector.nixosModules.default
     inputs.nixos-facter-modules.nixosModules.facter
     inputs.nixvirt.nixosModules.default
@@ -36,6 +37,7 @@
     ./kitty.nix
     ./kodi.nix
     ./libreoffice.nix
+    #./libvirt-hooks.nix
     ./loupe.nix
     ./mosquitto.nix
     ./netbootxyz

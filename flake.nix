@@ -23,6 +23,11 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
 
+    libvirt-hooks = {
+      url = "github:Jatsekku/libvirt-hooks";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
 
     nixvim = {
