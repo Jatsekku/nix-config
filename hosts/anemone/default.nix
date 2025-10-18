@@ -21,6 +21,50 @@
 
   facter.reportPath = ./facter.json;
 
+  #virtualisation.libvirtd.scopedHooks.qemu.enable = true;
+  #virtualisation.libvirtd.scopedHooks.qemu.perGuest."win10".prepare.begin = config.hardware.pciPassthrough.hooksFor."my-set".passExe;
+  #virtualisation.libvirtd.scopedHooks.qemu.perGuest."win10".release.end = config.hardware.pciPassthrough.hooksFor."my-set".unpassExe;
+
+  virtualisation.looking-glass = {
+    enable = true;
+    displays = {
+      vd1 = {
+        width = 1920;
+        height = 1080;
+        permissions = {
+          user = "jatsekku";
+          group = "qemu-libvirtd";
+          mode = "0660";
+        };
+      };
+    };
+  };
+
+  hardware.pciPassthrough = {
+    enable = true;
+    devicesLists."my-set" = {
+      devices = [
+        {
+          address = "0000:0d:00.1";
+          id = "1002:ab28";
+        }
+        {
+          address = "0000:0d:00.0";
+          id = "1002:73ff";
+        }
+      ];
+      bindOnBoot = true;
+    };
+  };
+
+  virtualisation.libvirtd.qemu.verbatimConfig = ''
+    cgroup_device_acl = [
+        "/dev/kvmfr0",
+        "/dev/kvm",
+        "/dev/null"
+    ]
+  '';
+
   myNixOS = {
     brother-printer.enable = true;
     brother-scanner = {
@@ -34,6 +78,7 @@
     };
     calibre.enable = true;
     chromium.enable = true;
+    disko.enable = true;
     docker.enable = true;
     virt-manager.enable = true;
     gnome-disk.enable = true;
@@ -50,11 +95,7 @@
     wl-clipboard.enable = true;
     waypipe.enable = true;
     vfio = {
-      enable = true;
-      devicesID = [
-        "0d:00.0"
-        "0d:00.1"
-      ];
+      enable = false;
     };
     vlc.enable = true;
     tree.enable = true;
