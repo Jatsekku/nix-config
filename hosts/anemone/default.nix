@@ -82,6 +82,7 @@
     docker.enable = true;
     virt-manager.enable = true;
     gnome-disk.enable = true;
+    gimp.enable = true;
     grim.enable = true;
     slurp.enable = true;
     sddm.enable = true;
