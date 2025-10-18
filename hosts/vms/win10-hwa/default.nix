@@ -8,6 +8,17 @@
   type = "kvm";
   uuid = "fbe91dfd-fdd9-2e31-1420-50ebf6599a91";
 
+  qemu-commandline = {
+    arg = [
+      { value = "-device"; }
+      { value = "{\"driver\":\"ivshmem-plain\",\"id\":\"shmem0\",\"memdev\":\"looking-glass\"}"; }
+      { value = "-object"; }
+      {
+        value = "{\"qom-type\":\"memory-backend-file\",\"id\":\"looking-glass\",\"mem-path\":\"/dev/kvmfr0\",\"size\":33554432,\"share\":true}";
+      }
+    ];
+  };
+
   # RAM
   memory = {
     count = 32;
@@ -124,6 +135,7 @@
       model.type = "e1000e";
     };
 
+    # Spice server
     graphics = {
       type = "spice";
       autoport = true;
@@ -133,11 +145,31 @@
 
     video = {
       model = {
-        type = "qxl";
-        vram = 65536;
-        heads = 1;
-        primary = true;
+        type = "none";
       };
     };
+
+    hostdev = [
+      {
+        type = "pci";
+        managed = true;
+        source.address = {
+          domain = 0;
+          bus = 13;
+          slot = 0;
+          function = 0;
+        };
+      }
+      {
+        type = "pci";
+        managed = true;
+        source.address = {
+          domain = 0;
+          bus = 13;
+          slot = 0;
+          function = 1;
+        };
+      }
+    ];
   };
 }
