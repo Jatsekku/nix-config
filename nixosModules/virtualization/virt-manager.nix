@@ -29,7 +29,10 @@ in
     virtualisation = {
       libvirtd = {
         enable = true;
+        onShutdown = "shutdown";
+        onBoot = "ignore";
         qemu = {
+          runAsRoot = true;
           swtpm.enable = true;
           ovmf.enable = true;
           ovmf.packages = [ pkgs.OVMFFull.fd ];
