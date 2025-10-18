@@ -25,6 +25,7 @@
     ./chromium.nix
     ./conan.nix
     ./git.nix
+    ./gimp.nix
     ./gnome
     ./grim.nix
     ./grub.nix
