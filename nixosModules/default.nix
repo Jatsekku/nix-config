@@ -50,6 +50,7 @@
     ./nh.nix
     ./nix.nix
     ./nixvirt.nix
+    ./nwg-displays.nix
     ./openssh.nix
     ./pixiecore.nix
     ./polkit.nix
