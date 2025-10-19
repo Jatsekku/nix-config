@@ -38,6 +38,7 @@
     ./hyprland
     ./jupyterlab.nix
     ./kde
+    ./kdenlive.nix
     ./kicad.nix
     ./kitty.nix
     ./kodi.nix
