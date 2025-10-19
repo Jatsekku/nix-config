@@ -78,6 +78,7 @@
     };
     calibre.enable = true;
     chromium.enable = true;
+    cryptsetup.enable = true;
     disko.enable = true;
     docker.enable = true;
     virt-manager.enable = true;
