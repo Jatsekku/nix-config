@@ -17,6 +17,7 @@
     ./obsidian.nix
     ./vscode.nix
     ./udiskie.nix
+    ./user-ssh-autokeygen.nix
     ./wofi.nix
     ./zellij.nix
     ./zsh.nix
