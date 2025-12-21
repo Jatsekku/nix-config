@@ -29,6 +29,7 @@
       enable = true;
       useAsDefault = true;
     };
+    user-ssh-autokeygen.enable = true;
     udiskie.enable = true;
     zellij.enable = true;
   };
