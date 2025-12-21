@@ -29,8 +29,8 @@
     enable = true;
     displays = {
       vd1 = {
-        width = 1920;
-        height = 1080;
+        width = 5120;
+        height = 1440;
         permissions = {
           user = "jatsekku";
           group = "qemu-libvirtd";
@@ -66,6 +66,10 @@
   '';
 
   myNixOS = {
+    amdgpu = {
+      hip = false;
+      opencl = true;
+    };
     brother-printer.enable = true;
     brother-scanner = {
       enable = true;
@@ -88,6 +92,7 @@
     slurp.enable = true;
     sddm.enable = true;
     jupyterlab.enable = true;
+    kdenlive.enable = true;
     kicad.enable = true;
     libreoffice.enable = true;
     libvirt.enable = true;
