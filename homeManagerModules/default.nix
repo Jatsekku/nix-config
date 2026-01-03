@@ -10,6 +10,7 @@
 }:
 {
   imports = [
+    ./ashell.nix
     ./git.nix
     ./fzf.nix
     ./kitty.nix
