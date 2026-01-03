@@ -18,6 +18,7 @@
     ./vscode.nix
     ./udiskie.nix
     ./user-ssh-autokeygen.nix
+    ./user-ssh-to-age.nix
     ./wofi.nix
     ./zellij.nix
     ./zsh.nix
