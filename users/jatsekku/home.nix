@@ -18,6 +18,7 @@
   home.stateVersion = "23.11";
 
   myHomeManager = {
+    ashell.enable = true;
     git = {
       enable = true;
       lfs = true;
