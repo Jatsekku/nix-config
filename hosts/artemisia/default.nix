@@ -5,6 +5,7 @@
   imports = [
     ./disko.nix
     ./hardware-configuration.nix
+    ./hyprland.nix
   ];
 
   # TODO: It may be worth to refactor

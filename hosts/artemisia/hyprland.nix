@@ -1,0 +1,5 @@
+{
+  myNixOS.hyprland = {
+    enable = true;
+  };
+}
