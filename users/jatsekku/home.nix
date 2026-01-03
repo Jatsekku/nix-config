@@ -30,6 +30,7 @@
       useAsDefault = true;
     };
     user-ssh-autokeygen.enable = true;
+    user-ssh-to-age.enable = true;
     udiskie.enable = true;
     zellij.enable = true;
   };
