@@ -19,6 +19,12 @@ in
       default = { };
       description = "Host specific settings for hyprland";
     };
+
+    withAshell = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Enable (not foricng) ashell";
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -30,5 +36,7 @@ in
       # Enable UWSM support
       withUWSM = true;
     };
+
+    myNixOS.ashell.enable = lib.mkDefault cfg.withAshell;
   };
 }
