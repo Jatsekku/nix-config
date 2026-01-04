@@ -21,6 +21,7 @@
   };
 
   myNixOS = {
+    chromium.enable = true;
     sddm.enable = true;
   };
 
