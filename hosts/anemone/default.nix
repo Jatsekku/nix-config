@@ -97,6 +97,7 @@
     libreoffice.enable = true;
     libvirt.enable = true;
     loupe.enable = true;
+    network-manager.networkmanager.enable = true;
     nerdfonts.enable = true;
     nwg-displays.enable = true;
     wireshark.enable = true;
