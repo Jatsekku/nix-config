@@ -2,12 +2,18 @@
   pkgs,
   ...
 }:
+let
+  systemUUID = "fbe91dfd-fdd9-2e31-1420-50ebf6599a91";
+  diskID = "nvme-WD_BLACK_SN850X_1000GB_24122X800837";
+  diskSN = "24122X800837";
+in
 {
   title = "Windows 10";
   name = "win10";
   type = "kvm";
-  uuid = "fbe91dfd-fdd9-2e31-1420-50ebf6599a91";
+  uuid = systemUUID;
 
+  # Lookin-glass
   qemu-commandline = {
     arg = [
       { value = "-device"; }
@@ -120,11 +126,12 @@
           io = "native";
           discard = "unmap";
         };
-        source.dev = "/dev/nvme0n1";
+        source.dev = "/dev/disk/by-id/${diskID}";
         target = {
           dev = "sda";
           bus = "sata";
         };
+        serial = diskSN;
       }
     ];
 
