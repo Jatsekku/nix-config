@@ -10,6 +10,7 @@
 }:
 {
   imports = [
+    ./ashell.nix
     ./nixvim
     ./hyprland.nix
     ./vscode.nix
