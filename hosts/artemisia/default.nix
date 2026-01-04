@@ -20,6 +20,10 @@
     };
   };
 
+  myNixOS = {
+    sddm.enable = true;
+  };
+
   networking.hostName = "artemisia";
   networking.hostId = "0F0F0F03";
   system.stateVersion = "25.11";
