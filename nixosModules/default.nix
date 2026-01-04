@@ -49,6 +49,7 @@
     ./mosquitto.nix
     ./netbootxyz
     ./nerdfonts.nix
+    ./network-manager
     ./nh.nix
     ./nix.nix
     ./nixvirt.nix
