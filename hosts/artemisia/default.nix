@@ -22,6 +22,7 @@
 
   myNixOS = {
     chromium.enable = true;
+    network-manager.networkmanager.enable = true;
     sddm.enable = true;
   };
 
