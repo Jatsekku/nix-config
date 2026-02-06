@@ -22,6 +22,7 @@
     inputs.nixvirt.nixosModules.default
     inputs.uwsm-launcher.nixosModules.default
     ./amd-gpu.nix
+    ./bottles.nix
     ./brother-printer.nix
     ./brother-scanner.nix
     ./calibre.nix
