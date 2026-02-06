@@ -28,6 +28,7 @@
     ./calibre.nix
     ./chromium.nix
     ./conan.nix
+    ./cura.nix
     ./cryptsetup.nix
     ./disko.nix
     ./git.nix
