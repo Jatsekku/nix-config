@@ -15,6 +15,7 @@
     ./fzf.nix
     ./kitty.nix
     ./nixvim.nix
+    ./notification-daemon
     ./obsidian.nix
     ./vscode.nix
     ./udiskie.nix
