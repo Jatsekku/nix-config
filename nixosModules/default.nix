@@ -64,6 +64,7 @@
     ./slurp.nix
     ./tree.nix
     ./virtualization
+    ./wake-on-lan.nix
     ./wayvnc.nix
     ./wireshark.nix
     ./wl-clipboard.nix
