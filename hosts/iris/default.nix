@@ -48,6 +48,16 @@
       wsdd = true;
     };
     sddm.enable = false;
+    wake-on-lan = {
+      # Enable waking this machine via WoL on en01
+      asTarget = {
+        enable = true;
+        interfaces = [ "en01" ];
+      };
+
+      # Allow sending WoL packets from this machine
+      asSource.enable = true;
+    };
     waypipe.enable = true;
     wayvnc.enable = true;
     zsh.enable = true;
