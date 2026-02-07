@@ -41,7 +41,10 @@ in
           enable = true;
           settings = {
             #homeassistant = true;
-            serial.port = cfg.adapterPort;
+            serial = {
+              adapter = "zstack";
+              port = cfg.adapterPort;
+            };
             permit_join = true;
             mqtt = {
               server = "mqtt://localhost";
