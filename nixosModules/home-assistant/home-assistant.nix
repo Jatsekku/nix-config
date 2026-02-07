@@ -25,6 +25,7 @@ in
         "met"
         "radio_browser"
         "mqtt"
+        "homeassistant_hardware"
       ];
       config = {
         # Includes dependencies for a basic setup
