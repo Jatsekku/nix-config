@@ -62,6 +62,7 @@
     ./samba.nix
     ./sddm
     ./slurp.nix
+    ./sunshine.nix
     ./tree.nix
     ./virtualization
     ./wake-on-lan.nix
