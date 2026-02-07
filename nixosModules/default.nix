@@ -48,6 +48,7 @@
     ./libreoffice.nix
     #./libvirt-hooks.nix
     ./loupe.nix
+    ./moonlight.nix
     ./mosquitto.nix
     ./netbootxyz
     ./nerdfonts.nix
