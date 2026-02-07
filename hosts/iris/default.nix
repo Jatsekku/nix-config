@@ -30,6 +30,7 @@
     };
     openssh.enable = true;
     mosquitto.enable = true;
+    moonlight.enable = true;
     netbootxyz = {
       #enable = true;
       liveEndpoint = "http://192.168.0.140:8080";
