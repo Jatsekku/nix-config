@@ -31,6 +31,7 @@
       enable = true;
       useAsDefault = true;
     };
+    notification-daemon.mako.enable = true;
     user-ssh-autokeygen.enable = true;
     user-ssh-to-age.enable = true;
     udiskie.enable = true;
