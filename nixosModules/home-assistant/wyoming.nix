@@ -18,6 +18,14 @@ in
 
   config = lib.mkIf cfg.enable {
     # Add wyoming integraton
-    services.home-assistant.extraComponents = [ "wyoming" ];
+    services.home-assistant = {
+      extraComponents = [ "wyoming" ];
+      config.wyoming = [
+        {
+          host = "0.0.0.0";
+          port = 10300;
+        }
+      ];
+    };
   };
 }
