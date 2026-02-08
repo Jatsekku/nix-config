@@ -61,6 +61,9 @@
     };
     waypipe.enable = true;
     wayvnc.enable = true;
+    wyoming = {
+      whisper.enable = true;
+    };
     zsh.enable = true;
   };
 
