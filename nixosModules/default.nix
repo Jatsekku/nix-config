@@ -71,6 +71,7 @@
     ./wireshark.nix
     ./wl-clipboard.nix
     ./wofi.nix
+    ./wyoming
     ./vlc.nix
     ./vfio.nix
     ./waypipe.nix
