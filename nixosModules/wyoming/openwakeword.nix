@@ -19,6 +19,6 @@ with lib;
       uri = "tcp://0.0.0.0:10400";
     };
 
-    networking.firewall.allowedTCPPorts = [ 10300 ];
+    networking.firewall.allowedTCPPorts = [ 10400 ];
   };
 }
