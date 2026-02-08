@@ -62,6 +62,7 @@
     waypipe.enable = true;
     wayvnc.enable = true;
     wyoming = {
+      openwakeword.enable = true;
       whisper.enable = true;
     };
     zsh.enable = true;
