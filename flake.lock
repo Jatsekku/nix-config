@@ -157,6 +157,26 @@
         "type": "github"
       }
     },
+    "docker-xdg-open": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1771716972,
+        "narHash": "sha256-9Pu8IHVt1uNcUyNZwJ8DaoBgTyt7GlCOOUNSQILF8MU=",
+        "owner": "Jatsekku",
+        "repo": "docker-xdg-open",
+        "rev": "dd6891a427635680da5d9284ddf549f7316c6753",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Jatsekku",
+        "repo": "docker-xdg-open",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -774,6 +794,7 @@
       "inputs": {
         "bash-logger": "bash-logger",
         "disko": "disko",
+        "docker-xdg-open": "docker-xdg-open",
         "gpu-passthrough": "gpu-passthrough",
         "home-manager": "home-manager",
         "hyprland": "hyprland",

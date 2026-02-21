@@ -6,6 +6,12 @@
       url = "github:Jatsekku/bash-logger";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    docker-xdg-open = {
+      url = "github:Jatsekku/docker-xdg-open";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     monitor-detector.url = "github:Jatsekku/monitor-detector";
     uwsm-launcher.url = "github:Jatsekku/uwsm-launcher";
 

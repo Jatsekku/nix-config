@@ -12,6 +12,7 @@
   imports = [
     inputs.bash-logger.nixosModules.default
     inputs.disko.nixosModules.default
+    inputs.docker-xdg-open.nixosModules.default
     inputs.gpu-passthrough.nixosModules.default
     inputs.gpu-passthrough.nixosModules.looking-glass
     inputs.home-manager.nixosModules.default
