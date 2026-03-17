@@ -19,6 +19,10 @@
     createEtcSymlink = true;
   };
 
+  programs.docker-xdg-open = {
+    server.enable = true;
+  };
+
   facter.reportPath = ./facter.json;
 
   #virtualisation.libvirtd.scopedHooks.qemu.enable = true;

@@ -11,6 +11,7 @@
 {
   imports = [
     ./cmp.nix
+    ./dap.nix
     ./lualine.nix
     ./lsp.nix
     ./neo-tree.nix
