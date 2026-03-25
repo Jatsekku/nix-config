@@ -11,6 +11,10 @@
   # TODO: It may be worth to refactor
   myNixOS.grub.enable = false;
   boot = {
+    kernelParams = [
+      "nomodeset=0"
+      "nvidia-drm.modeset=1"
+    ];
     supportedFilesystems = [ "btrfs" ];
     loader.grub = {
       enable = true;
@@ -20,9 +24,16 @@
     };
   };
 
+  boot.initrd.kernelModules = [
+    "amdgpu"
+    "i915"
+    "nouveau"
+  ];
+
   myNixOS = {
     chromium.enable = true;
     network-manager.networkmanager.enable = true;
+    nwg-displays.enable = true;
     sddm.enable = true;
   };
 
@@ -32,5 +43,7 @@
 
   # Specific for portable NixOS
   hardware.enableAllFirmware = true;
-  hardware.enableAllHardware = true;
+  #hardware.enableAllHardware = true;
+  services.xserver.videoDrivers = [ "modesetting" ];
+
 }
