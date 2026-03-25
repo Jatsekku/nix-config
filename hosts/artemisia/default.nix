@@ -15,7 +15,7 @@
       "nomodeset=0"
       "nvidia-drm.modeset=1"
     ];
-    supportedFilesystems = [ "btrfs" ];
+    supportedFilesystems = [ "btrfs" "zfs" ];
     loader.grub = {
       enable = true;
       efiSupport = true;
