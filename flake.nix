@@ -41,6 +41,8 @@
 
     nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
 
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
