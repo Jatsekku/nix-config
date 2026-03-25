@@ -32,6 +32,7 @@
 
   myNixOS = {
     chromium.enable = true;
+    disko.enable = true;
     network-manager.networkmanager.enable = true;
     nwg-displays.enable = true;
     sddm.enable = true;
