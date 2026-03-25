@@ -97,6 +97,17 @@
             };
           };
         };
+
+        stachys = {
+          config = ./hosts/stachys;
+          platform = "x86_64-linux";
+          users = {
+            jatsekku = {
+              user = ./users/jatsekku/user.nix;
+              home = ./users/jatsekku/home.nix;
+            };
+          };
+        };
       };
 
       vmConfigurations = {
