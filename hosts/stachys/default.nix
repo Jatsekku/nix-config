@@ -82,6 +82,7 @@
       hip = false;
       opencl = true;
     };
+    brillo.enable = true;
     brother-printer.enable = true;
     brother-scanner = {
       enable = true;
