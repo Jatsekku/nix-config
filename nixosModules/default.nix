@@ -26,6 +26,7 @@
     ./bluetooth-manager
     ./bottles.nix
     ./brightnessctl.nix
+    ./brillo.nix
     ./brother-printer.nix
     ./brother-scanner.nix
     ./calibre.nix
