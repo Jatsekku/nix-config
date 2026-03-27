@@ -134,4 +134,6 @@
     layout = "pl";
   };
 
+  # Power Monitoring service
+  services.upower.enable = true;
 }
