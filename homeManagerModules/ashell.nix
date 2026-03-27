@@ -9,6 +9,7 @@ let
   cfg = config.myHomeManager.ashell;
 
   commands = {
+    bluetoothMore = osConfig.myNixOS.bluetooth-manager.guiCmd;
     wifiMore = osConfig.myNixOS.network-manager.guiCmd;
     shutdown = "shutdown now";
     reboot = "systemctl reboot";
@@ -26,6 +27,7 @@ in
       systemd.enable = true;
 
       settings.settings = {
+        "bluetooth_more_cmd" = commands.bluetoothMore;
         "wifi_more_cmd" = commands.wifiMore;
         "shutdown_cmd" = commands.shutdown;
         "reboot_cmd" = commands.reboot;
