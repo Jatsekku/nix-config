@@ -43,6 +43,11 @@ in
 
         # Key bindings
         bind = [
+          # Brightness up
+          ", XF86MonBrightnessUp, exec, brillo -q -A 10"
+          # Brightness down
+          ", XF86MonBrightnessDown, exec, brillo -q -U 10"
+
           # Open terminal
           "${mod}, T, exec, ${terminal}"
 
