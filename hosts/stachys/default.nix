@@ -138,4 +138,8 @@
 
   # Power Monitoring service
   services.upower.enable = true;
+
+  # Power Management daemon
+  services.power-profiles-daemon.enable = false;
+  services.tlp.enable = true;
 }
