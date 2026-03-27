@@ -25,6 +25,7 @@
     ./amd-gpu.nix
     ./bluetooth-manager
     ./bottles.nix
+    ./brightnessctl.nix
     ./brother-printer.nix
     ./brother-scanner.nix
     ./calibre.nix
