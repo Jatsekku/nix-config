@@ -25,6 +25,12 @@ in
       default = true;
       description = "Enable (not foricng) ashell";
     };
+
+    withHypridle = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      description = "Enable (not foricng) hypridle";
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -38,5 +44,8 @@ in
     };
 
     myNixOS.ashell.enable = lib.mkDefault cfg.withAshell;
+
+    # Enable hypridle service
+    services.hypridle.enable = cfg.withHypridle;
   };
 }
