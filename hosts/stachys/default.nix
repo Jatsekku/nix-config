@@ -111,6 +111,7 @@
     libvirt.enable = true;
     loupe.enable = true;
     network-manager.networkmanager.enable = true;
+    bluetooth-manager.blueman.enable = true;
     nerdfonts.enable = true;
     nwg-displays.enable = true;
     wireshark.enable = true;
