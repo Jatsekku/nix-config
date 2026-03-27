@@ -18,6 +18,15 @@
     workspaces = {
       visibilityMode = "MonitorSpecific";
     };
-
+    settings = {
+      indicators = [
+        "Network"
+        "Battery"
+        "Audio"
+        "Bluetooth"
+        "PowerProfile"
+        "IdleInhibitor"
+      ];
+    };
   };
 }
