@@ -99,6 +99,7 @@
     docker.enable = true;
     virt-manager.enable = true;
     gnome-disk.enable = true;
+    gnome-power-manager.enable = true;
     gimp.enable = true;
     grim.enable = true;
     slurp.enable = true;
