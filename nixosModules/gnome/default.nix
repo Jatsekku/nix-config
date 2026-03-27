@@ -11,5 +11,6 @@
 {
   imports = [
     ./gnome-disk.nix
+    ./gnome-power-manager.nix
   ];
 }
