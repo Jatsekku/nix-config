@@ -48,6 +48,11 @@ in
           # Brightness down
           ", XF86MonBrightnessDown, exec, brillo -q -U 10"
 
+          # Volume up
+          ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_SINK@ 10%+"
+          # Volume down
+          ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_SINK@ 10%-"
+
           # Open terminal
           "${mod}, T, exec, ${terminal}"
 
