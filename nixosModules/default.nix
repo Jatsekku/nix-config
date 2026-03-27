@@ -23,6 +23,7 @@
     inputs.nixvirt.nixosModules.default
     inputs.uwsm-launcher.nixosModules.default
     ./amd-gpu.nix
+    ./bluetooth-manager
     ./bottles.nix
     ./brother-printer.nix
     ./brother-scanner.nix
