@@ -33,50 +33,6 @@
 
   facter.reportPath = ./facter.json;
 
-  #virtualisation.libvirtd.scopedHooks.qemu.enable = true;
-  #virtualisation.libvirtd.scopedHooks.qemu.perGuest."win10".prepare.begin = config.hardware.pciPassthrough.hooksFor."my-set".passExe;
-  #virtualisation.libvirtd.scopedHooks.qemu.perGuest."win10".release.end = config.hardware.pciPassthrough.hooksFor."my-set".unpassExe;
-
-  virtualisation.looking-glass = {
-    enable = true;
-    displays = {
-      vd1 = {
-        width = 5120;
-        height = 1440;
-        permissions = {
-          user = "jatsekku";
-          group = "qemu-libvirtd";
-          mode = "0660";
-        };
-      };
-    };
-  };
-
-  hardware.pciPassthrough = {
-    enable = true;
-    devicesLists."my-set" = {
-      devices = [
-        {
-          address = "0000:0d:00.1";
-          id = "1002:ab28";
-        }
-        {
-          address = "0000:0d:00.0";
-          id = "1002:73ff";
-        }
-      ];
-      bindOnBoot = true;
-    };
-  };
-
-  virtualisation.libvirtd.qemu.verbatimConfig = ''
-    cgroup_device_acl = [
-        "/dev/kvmfr0",
-        "/dev/kvm",
-        "/dev/null"
-    ]
-  '';
-
   myNixOS = {
     amdgpu = {
       hip = false;
