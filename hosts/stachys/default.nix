@@ -143,4 +143,10 @@
   # Power Management daemon
   services.power-profiles-daemon.enable = false;
   services.tlp.enable = true;
+
+  # GPUs symlinking
+  hardware.gpuSymlinks.devices = {
+    igpu = "0000:06:00.0";
+    dgpu = "0000:01:00.0";
+  };
 }
