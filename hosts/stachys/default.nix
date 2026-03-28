@@ -9,7 +9,6 @@
 }:
 {
   imports = [
-    inputs.nixos-hardware.nixosModules.lenovo-legion-16aph8
     ./disko.nix
     ./hardware-configuration.nix
     ./hyprland.nix
