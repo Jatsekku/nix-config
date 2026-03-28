@@ -38,6 +38,7 @@
     ./git.nix
     ./gimp.nix
     ./gnome
+    ./gpu-symlink.nix
     ./grim.nix
     ./grub.nix
     ./home-manager.nix
