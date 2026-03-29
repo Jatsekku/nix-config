@@ -98,7 +98,102 @@
 
   # Power Management daemon
   services.power-profiles-daemon.enable = false;
-  services.tlp.enable = true;
+  services.tlp = {
+    enable = true;
+    settings = {
+      # Smart power profile switching
+      TLP_AUTO_SWITCH = 2;
+      # Default power profile when switching is disabled or no power source is detected
+      TLP_DEFAULT_MODE = "BAL";
+
+      # AUDIO
+      # Enable power save on audio devices
+      # after 10s (if driver supports timeout)
+      SOUND_POWER_SAVE_ON_AC = 30;
+      SOUND_POWER_SAVE_ON_BAT = 10;
+      # Power off the controller togethe with the sound chip
+      SOUND_POWER_SAVE_CONTROLLER = true;
+
+      # BATTERY CARE
+      # Stop charging batteries at 80%, starts at 40%
+      # Behavior depends on battery's capabilities
+      START_CHARGE_THRESH_BAT0 = 40;
+      STOP_CHARGE_THRESH_BAT0 = 80;
+      START_CHARGE_THRESH_BAT1 = 40;
+      STOP_CHARGE_THRESH_BAT1 = 80;
+      RESTORE_THRESHOLDS_ON_BAT = true;
+
+      # GRAPHICS
+
+      # AMD
+
+      # Dynamically select the optimal power profile
+      RADEON_DPM_PERF_LEVEL_ON_AC = "auto";
+      RADEON_DPM_STATE_ON_AC = "performance";
+      # Enforce lowest clock to save power
+      RADEON_DPM_PERF_LEVEL_ON_BAT = "low";
+      RADEON_DPM_STATE_ON_BAT = "battery";
+
+      # Adaptive Backlight Modulation (may affect color balance)
+      AMDGPU_ABM_LEVEL_ON_AC = 0;
+      AMDGPU_ABM_LEVEL_ON_BAT = 4;
+      AMDGPU_ABM_LEVEL_ON_SAV = 4;
+
+      # Intel
+      INTEL_GPU_POWER_PROFILE_ON_AC = "base";
+      INTEL_GPU_POWER_PROFILE_ON_BAT = "power_saving";
+      INTEL_GPU_POWER_PROFILE_ON_SAV = "power_saving";
+
+      # NETWROKING
+      # WiFI power saving mode
+      WIFI_PWR_ON_AC = "off";
+      WIFI_PWR_ON_BAT = "on";
+
+      # PLATFORM
+      PLATFORM_PROFILE_ON_AC = "performance";
+      PLATFORM_PROFILE_ON_BAT = "balanced";
+      PLATFORM_PROFILE_ON_SAV = "low-power";
+
+      # CPU
+      CPU_DRIVER_OPMODE_ON_AC = "active";
+      CPU_DRIVER_OPMODE_ON_BAT = "active";
+      CPU_DRIVER_OPMODE_ON_SAV = "active";
+
+      CPU_SCALING_GOVERNOR_ON_AC = "performance";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+      CPU_SCALING_GOVERNOR_ON_SAV = "powersave";
+
+      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+      CPU_ENERGY_PERF_POLICY_ON_SAV = "power";
+
+      CPU_MIN_PERF_ON_AC = 0;
+      CPU_MAX_PERF_ON_AC = 100;
+      CPU_MIN_PERF_ON_BAT = 0;
+      CPU_MAX_PERF_ON_BAT = 80;
+
+      # RADIO DEVICE SWITCHING
+      # Restore states of devices beetween shutdowns
+      RESTORE_DEVICE_STATE_ON_STARTUP = true;
+
+      # Disable devices if not in use (on battery profile)
+      DEVICES_TO_DISABLE_ON_BAT_NOT_IN_USE = "bluetooth nfc wifi wwan";
+
+      # PCIE AUTOSUSPEND AND ASPM
+      RUNTIME_PM_ON_AC = "on";
+      RUNTIME_PM_ON_BAT = "auto";
+
+      PCIE_ASPM_ON_AC = "default";
+      PCIE_ASPM_ON_BAT = "powersave";
+
+      # USB Autosuspend
+      USB_AUTOSUSPEND = true;
+
+      # TRACE MODE
+      TLP_DEBUG = "arg bat disk lock nm path pm ps rf run sysfs udev usb";
+
+    };
+  };
 
   # GPUs symlinking
   hardware.gpuSymlinks.devices = {
