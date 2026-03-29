@@ -12,6 +12,7 @@
     ./disko.nix
     ./hardware-configuration.nix
     ./hyprland.nix
+    ./nvidia-gpu.nix
   ];
 
   myNixOS.grub.enable = false;
