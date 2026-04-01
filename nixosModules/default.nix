@@ -63,6 +63,7 @@
     ./nixvirt.nix
     ./nwg-displays.nix
     ./openssh.nix
+    ./openconnect.nix
     ./pixiecore.nix
     ./polkit.nix
     ./samba.nix
