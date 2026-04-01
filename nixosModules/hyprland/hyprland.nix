@@ -28,6 +28,12 @@ in
 
     withHypridle = lib.mkOption {
       type = lib.types.bool;
+      default = false;
+      description = "Enable (not foricng) hypridle";
+    };
+
+    withHyprpolkitagent = lib.mkOption {
+      type = lib.types.bool;
       default = true;
       description = "Enable (not foricng) hypridle";
     };
@@ -44,6 +50,7 @@ in
     };
 
     myNixOS.ashell.enable = lib.mkDefault cfg.withAshell;
+    myNixOS.hyprpolkitagent.enable = lib.mkDefault cfg.withHyprpolkitagent;
 
     # Enable hypridle service
     services.hypridle.enable = cfg.withHypridle;
