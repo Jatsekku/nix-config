@@ -71,6 +71,7 @@
     ./slurp.nix
     ./sunshine.nix
     ./tree.nix
+    ./teams.nix
     ./virtualization
     ./wake-on-lan.nix
     ./wayvnc.nix
