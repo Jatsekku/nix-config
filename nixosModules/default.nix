@@ -30,6 +30,7 @@
     ./brother-printer.nix
     ./brother-scanner.nix
     ./calibre.nix
+    ./cameractrls.nix
     ./chromium.nix
     ./conan.nix
     ./cura.nix
