@@ -85,6 +85,7 @@
     ./waypipe.nix
     ./remmina.nix
     ./ripgrep.nix
+    ./zoom-us.nix
     ./zsh.nix
   ];
 }
