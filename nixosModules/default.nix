@@ -76,6 +76,7 @@
     ./virtualization
     ./wake-on-lan.nix
     ./wayvnc.nix
+    ./wf-recorder.nix
     ./wireshark.nix
     ./wl-clipboard.nix
     ./wofi.nix
