@@ -39,6 +39,7 @@
     ./git.nix
     ./gimp.nix
     ./gnome
+    ./gpu-screen-recorder.nix
     ./gpu-symlink.nix
     ./grim.nix
     ./grub.nix
