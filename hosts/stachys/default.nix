@@ -15,14 +15,32 @@
     ./nvidia-gpu.nix
   ];
 
-  myNixOS.grub.enable = false;
+  myNixOS.grub.enable = true;
   boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+    kernelParams = [
+      "nvidia-drm.modeset=1"
+      "nvidia-drm.fbdev=1"
+
+      # AMD GPU Power Management
+      "amdgpu.aspm=1"
+      "amdgpu.bapm=1"
+      "amdgpu.dc=1"
+      "amdgpu.dpm=1"
+      "amdgpu.gpu_recovery=1"
+      "amdgpu.runpm=1"
+      "amdgpu.dcfeaturemask=0x8"
+
+      "amd_pstate=active"
+
+      "pcie_aspm=force"
+    ];
     supportedFilesystems = [ "zfs" ];
     loader.grub = {
-      enable = true;
-      efiSupport = true;
-      efiInstallAsRemovable = true;
-      devices = [ "nodev" ];
+      #enable = true;
+      #efiSupport = true;
+      #efiInstallAsRemovable = true;
+      #devices = [ "nodev" ];
     };
   };
 
@@ -30,6 +48,8 @@
     enable = true;
     createEtcSymlink = true;
   };
+
+  programs.nix-ld.enable = true;
 
   facter.reportPath = ./facter.json;
 
@@ -39,7 +59,6 @@
       opencl = true;
     };
     brillo.enable = true;
-    brother-printer.enable = true;
     brother-scanner = {
       enable = true;
       netDevices = {
@@ -50,6 +69,7 @@
       };
     };
     calibre.enable = true;
+    cameractrls.enable = true;
     chromium.enable = true;
     cryptsetup.enable = true;
     disko.enable = true;
@@ -58,10 +78,12 @@
     gnome-disk.enable = true;
     gnome-power-manager.enable = true;
     gimp.enable = true;
+    gpu-screen-recorder.enable = true;
     grim.enable = true;
     slurp.enable = true;
     sddm.enable = true;
     jupyterlab.enable = true;
+    kde.enable = true;
     kdenlive.enable = true;
     kicad.enable = true;
     libreoffice.enable = true;
@@ -71,6 +93,7 @@
     bluetooth-manager.blueman.enable = true;
     nerdfonts.enable = true;
     nwg-displays.enable = true;
+    openconnect.enable = true;
     wireshark.enable = true;
     wl-clipboard.enable = true;
     waypipe.enable = true;
@@ -78,7 +101,9 @@
       enable = false;
     };
     vlc.enable = true;
+    teams.enable = true;
     tree.enable = true;
+    zoom-us.enable = true;
     zsh.enable = true;
     remmina.enable = true;
   };
@@ -87,7 +112,7 @@
   networking.hostId = "0F0F0F01";
   system.stateVersion = "23.11";
 
-  time.timeZone = "Europe/Warsaw";
+  time.timeZone = "Asia/Tokyo";
   i18n.defaultLocale = "en_US.UTF-8";
   services.xserver.xkb = {
     layout = "pl";
@@ -97,6 +122,19 @@
   services.upower.enable = true;
 
   # Power Management daemon
+  services.auto-cpufreq = {
+    enable = false;
+    settings = {
+      battery = {
+        governor = "powersave";
+        turbo = "never";
+      };
+      charger = {
+        governor = "performance";
+        turbo = "auto";
+      };
+    };
+  };
   services.power-profiles-daemon.enable = false;
   services.tlp = {
     enable = true;
@@ -111,6 +149,7 @@
       # after 10s (if driver supports timeout)
       SOUND_POWER_SAVE_ON_AC = 30;
       SOUND_POWER_SAVE_ON_BAT = 10;
+      SOUND_POWER_SAVE_ON_SAV = 5;
       # Power off the controller togethe with the sound chip
       SOUND_POWER_SAVE_CONTROLLER = true;
 
@@ -126,7 +165,6 @@
       # GRAPHICS
 
       # AMD
-
       # Dynamically select the optimal power profile
       RADEON_DPM_PERF_LEVEL_ON_AC = "auto";
       RADEON_DPM_STATE_ON_AC = "performance";
@@ -147,7 +185,7 @@
       # NETWROKING
       # WiFI power saving mode
       WIFI_PWR_ON_AC = "off";
-      WIFI_PWR_ON_BAT = "on";
+      WIFI_PWR_ON_BAT = "off";
 
       # PLATFORM
       PLATFORM_PROFILE_ON_AC = "performance";
@@ -200,4 +238,17 @@
     igpu = "0000:06:00.0";
     dgpu = "0000:01:00.0";
   };
+
+  #networking.wireless.enable = false;
+  #networking.networkmanager.wifi.backend = "iwd";
+
+  # Firmware update daemon
+  services.fwupd.enable = true;
+
+  fonts.fontconfig.enable = true;
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
+  ];
 }
