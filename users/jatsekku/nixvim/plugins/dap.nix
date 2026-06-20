@@ -57,7 +57,7 @@
         c = [
           {
             name = "Launch";
-            type = "gdb";
+            type = "lldb";
             request = "launch";
             program.__raw = # lua
               ''
@@ -66,6 +66,7 @@
                 end
               '';
             cwd = "\${workspaceFolder}";
+            stopAtEntry = true;
           }
         ];
 
