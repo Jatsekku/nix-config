@@ -9,6 +9,7 @@
       (system.facter ./_facter.json)
       system.grub
       system.locale
+      system.networkmanager
       system.nh
       system.nix
     ];
