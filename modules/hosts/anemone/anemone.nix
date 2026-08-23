@@ -8,6 +8,7 @@
       (system.disko ./_disko.nix)
       (system.facter ./_facter.json)
       system.grub
+      system.locale
       system.nh
       system.nix
     ];
