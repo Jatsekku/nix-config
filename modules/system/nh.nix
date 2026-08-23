@@ -1,0 +1,17 @@
+{ inputs, ... }:
+{
+  den.aspects.system.nh = {
+    nixos.programs.nh = {
+      enable = true;
+      flake = "${inputs.self}";
+
+      # Enable periodic GC oon weekly basis
+      # Keep last 5 generations
+      clean = {
+        enable = true;
+        dates = "weekly";
+        extraArgs = "--keep 5";
+      };
+    };
+  };
+}
