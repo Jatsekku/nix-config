@@ -9,6 +9,7 @@
       (system.facter ./_facter.json)
       system.grub
       system.nh
+      system.nix
     ];
 
     nixos = {
