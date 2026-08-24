@@ -5,6 +5,9 @@
 {
   den.aspects.anemone = {
     includes = with den.aspects; [
+      desktop.niri
+      desktop.sddm
+
       (system.disko ./_disko.nix)
       (system.facter ./_facter.json)
       system.grub
