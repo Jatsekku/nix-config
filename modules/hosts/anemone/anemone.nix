@@ -11,6 +11,7 @@
 
       (system.disko ./_disko.nix)
       (system.facter ./_facter.json)
+      system.git
       system.grub
       system.locale
       system.networkmanager
