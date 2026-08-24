@@ -3,7 +3,12 @@
     nixos = {
       networking.networkmanager = {
         enable = true;
-        wifi.backend = "iwd";
+
+        # BUG (24.08.2026):
+        # There is problem with NM/iwd integration
+        # when SSID contains characters like "@" or "+".
+        #wifi.backend = "iwd";
+        wifi.backend = "wpa_supplicant";
       };
     };
   };
