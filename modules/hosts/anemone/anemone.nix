@@ -9,6 +9,8 @@
       desktop.plasma
       desktop.sddm
 
+      editors.nixvim
+
       (system.disko ./_disko.nix)
       (system.facter ./_facter.json)
       system.git
@@ -17,6 +19,7 @@
       system.networkmanager
       system.nh
       system.nix
+
     ];
 
     nixos = {
