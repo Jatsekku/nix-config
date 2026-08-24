@@ -29,6 +29,12 @@
     # Nix Packages collection & NixOS.
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
+    # Configure Neovim with Nix.
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # The formatter multiplexer
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
