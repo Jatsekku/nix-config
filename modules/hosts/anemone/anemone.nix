@@ -20,6 +20,7 @@
       system.nh
       system.nix
 
+      web.chromium
     ];
 
     nixos = {
