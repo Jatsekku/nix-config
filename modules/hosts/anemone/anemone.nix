@@ -6,6 +6,7 @@
   den.aspects.anemone = {
     includes = with den.aspects; [
       desktop.niri
+      desktop.plasma
       desktop.sddm
 
       (system.disko ./_disko.nix)
