@@ -11,6 +11,8 @@
 
       editors.nixvim
 
+      gaming.steam
+
       shells.zsh
 
       (system.disko ./_disko.nix)
