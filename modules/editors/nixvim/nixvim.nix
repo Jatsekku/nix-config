@@ -9,6 +9,9 @@
         viAlias = lib.mkDefault true;
         vimAlias = lib.mkDefault true;
 
+        # Force nixvim to use system provided nixpkgs
+        nixpkgs.source = inputs.nixpkgs;
+
         opts = {
           expandtab = lib.mkDefault true;
           tabstop = lib.mkDefault 4;
