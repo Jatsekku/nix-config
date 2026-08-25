@@ -16,6 +16,14 @@
     den.aspects.system.hostid
   ];
 
-  # Enable homeManager integration for all users
-  den.schema.user.classes = lib.mkDefault [ "homeManager" ];
+  den.schema.user = {
+    classes = lib.mkDefault [
+      # Enable homeManager integration for all users
+      "homeManager"
+    ];
+    includes = [
+      # Set up ssh client config for each user
+      den.aspects.system.ssh.client
+    ];
+  };
 }
