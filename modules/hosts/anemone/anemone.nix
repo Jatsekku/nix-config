@@ -20,6 +20,8 @@
       system.nh
       system.nix
 
+      utils.fzf
+
       web.chromium
     ];
 
