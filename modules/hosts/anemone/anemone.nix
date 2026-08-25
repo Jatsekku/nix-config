@@ -11,6 +11,8 @@
 
       editors.nixvim
 
+      shells.zsh
+
       (system.disko ./_disko.nix)
       (system.facter ./_facter.json)
       system.git
