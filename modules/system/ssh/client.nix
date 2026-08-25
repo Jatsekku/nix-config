@@ -9,9 +9,12 @@
       }:
       {
         # Manage ~/.ssh/config declaratively
-        programs.ssh.enable = true;
+        programs.ssh = {
+          enable = true;
+          enableDefaultConfig = false;
+        };
 
-        # Synchronous activation script: runs on initial boot/switch
+        # Run ssh key generation on HM generation activation
         home.activation.sshAutoKeygen = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
           KEY_FILE="${config.home.homeDirectory}/.ssh/id_ed25519"
 
