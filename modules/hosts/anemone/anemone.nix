@@ -21,6 +21,7 @@
       system.nix
 
       utils.fzf
+      utils.tree
 
       web.chromium
     ];
