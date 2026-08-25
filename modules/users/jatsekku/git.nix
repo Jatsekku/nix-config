@@ -8,6 +8,7 @@
             name = "Jatsekku";
             email = "Jatsekku2@gmail.com";
           };
+          core.editor = "nvim";
         };
       };
     };
