@@ -17,6 +17,9 @@
           tabstop = lib.mkDefault 4;
           shiftwidth = lib.mkDefault 4;
         };
+
+        # Set default leader key
+        globals.mapleader = lib.mkDefault " ";
       };
     };
   };
