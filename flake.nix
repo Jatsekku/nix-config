@@ -35,6 +35,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # LibVirt domain management for Nix.
+    nixvirt = {
+      url = "github:AshleyYakeley/NixVirt";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # The formatter multiplexer
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
