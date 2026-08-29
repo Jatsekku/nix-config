@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "bash-logger": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788096965,
+        "narHash": "sha256-MWR3yXxP4//kv69VIJV+IpWXM9xNNrpaR9hWQeuMHj8=",
+        "owner": "Jatsekku",
+        "repo": "bash-logger",
+        "rev": "e384419df2d6f62d8fa6a7175d71f128014150ff",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Jatsekku",
+        "repo": "bash-logger",
+        "type": "github"
+      }
+    },
     "den": {
       "locked": {
         "lastModified": 1786475005,
@@ -74,6 +94,29 @@
       "original": {
         "owner": "hercules-ci",
         "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "gpu-passthrough": {
+      "inputs": {
+        "bash-logger": [
+          "bash-logger"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760208505,
+        "narHash": "sha256-Y5COkyf9eQe+Vk0/rWRUQCurrMuoQiz+w4CZVdSVKaQ=",
+        "owner": "Jatsekku",
+        "repo": "gpu-passthrough",
+        "rev": "31725c32e2421314d6a2925f6d8eb16bb0a891f8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Jatsekku",
+        "repo": "gpu-passthrough",
         "type": "github"
       }
     },
@@ -172,9 +215,11 @@
     },
     "root": {
       "inputs": {
+        "bash-logger": "bash-logger",
         "den": "den",
         "disko": "disko",
         "flake-parts": "flake-parts",
+        "gpu-passthrough": "gpu-passthrough",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
         "nixpkgs": "nixpkgs",
