@@ -2,6 +2,12 @@
   description = "Jatsekku's NixOS flake file. (Dendritic pattern with Den framework)";
 
   inputs = {
+    # Feature-rich, flexible logger utility for bash.
+    bash-logger = {
+      url = "github:Jatsekku/bash-logger";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Aspect-oriented, context-driven Nix configurations.
     den.url = "github:denful/den";
 
@@ -15,6 +21,12 @@
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
+
+    gpu-passthrough = {
+      url = "github:Jatsekku/gpu-passthrough";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.bash-logger.follows = "bash-logger";
     };
 
     # Manage a user environment using Nix.
