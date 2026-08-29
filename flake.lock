@@ -107,11 +107,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1760208505,
-        "narHash": "sha256-Y5COkyf9eQe+Vk0/rWRUQCurrMuoQiz+w4CZVdSVKaQ=",
+        "lastModified": 1790188039,
+        "narHash": "sha256-9OqTs/RbZyf81vB1JdgPdbKnDMp+Cqyiy3PiiU+pMKk=",
         "owner": "Jatsekku",
         "repo": "gpu-passthrough",
-        "rev": "31725c32e2421314d6a2925f6d8eb16bb0a891f8",
+        "rev": "8202839859d46667e5c75ae71d479581ae5863bb",
         "type": "github"
       },
       "original": {
