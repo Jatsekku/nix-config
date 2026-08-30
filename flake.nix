@@ -38,6 +38,12 @@
     # Import all nix files in a directory tree.
     import-tree.url = "github:denful/import-tree";
 
+    nixos-facter-debug = {
+      url = "github:Jatsekku/nixos-facter-debug";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.bash-logger.follows = "bash-logger";
+    };
+
     # Nix Packages collection & NixOS.
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
