@@ -22,6 +22,8 @@
       "homeManager"
     ];
     includes = [
+      # Use HM to config zsh for each user
+      den.aspects.shells.zsh
       # Set up ssh client config for each user
       den.aspects.system.ssh.client
     ];
