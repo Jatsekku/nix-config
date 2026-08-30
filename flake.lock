@@ -155,6 +155,29 @@
         "type": "github"
       }
     },
+    "nixos-facter-debug": {
+      "inputs": {
+        "bash-logger": [
+          "bash-logger"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788119547,
+        "narHash": "sha256-du2PClXojA6ufErznMOyLMDQMnSbjZ/K3HveLIQR8VY=",
+        "owner": "Jatsekku",
+        "repo": "nixos-facter-debug",
+        "rev": "582dbf891040d03e8b821cb6f5aaea3b782fb09f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Jatsekku",
+        "repo": "nixos-facter-debug",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1787209939,
@@ -222,6 +245,7 @@
         "gpu-passthrough": "gpu-passthrough",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
+        "nixos-facter-debug": "nixos-facter-debug",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "nixvirt": "nixvirt",
