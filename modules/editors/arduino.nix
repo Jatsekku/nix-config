@@ -6,5 +6,10 @@
         pkgs.arduino-ide
       ];
     };
+
+    # Add users to dialout group
+    provides.to-users = { user, ... }: {
+      nixos.users.users.${user.name}.extraGroups = [ "dialout" ];
+    };
   };
 }
