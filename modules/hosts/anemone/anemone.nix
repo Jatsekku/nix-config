@@ -22,6 +22,7 @@
 
       services.home-assistant
       services.immich
+      services.printing
 
       shells.zsh
 
