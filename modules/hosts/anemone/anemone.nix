@@ -45,10 +45,10 @@
       virtualization.libvirtd
       (virtualization.nixvirt.windows10 {
         name = "win10-workstation";
-        disks = {
-          path = "/dev/disk/by-id/nvme-WD_BLACK_SN850X_1000GB_24122X800837";
-          serial = "24122X800837";
-        };
+        disks = [
+          { path = "/home/jatsekku/Downloads/Win10_22H2_EnglishInternational_x64v1.iso"; }
+          { path = "/var/lib/libvirt/images/win10-disk.qcow2"; }
+        ];
       })
       (virtualization.nixvirt.linux {
         name = "alpine";
