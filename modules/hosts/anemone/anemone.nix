@@ -38,6 +38,7 @@
       utils.pciutils
       utils.smart
       utils.tree
+      utils.ydotool
 
       web.chromium
     ];
