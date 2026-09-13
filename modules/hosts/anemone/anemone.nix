@@ -5,6 +5,8 @@
 {
   den.aspects.anemone = {
     includes = with den.aspects; [
+      ai.claude
+
       cad.kicad
 
       desktop.niri
