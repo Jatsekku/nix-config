@@ -20,6 +20,8 @@
       gaming.steam
       gaming.sunshine
 
+      services.printing
+
       shells.zsh
 
       (system.disko ./_disko.nix)
