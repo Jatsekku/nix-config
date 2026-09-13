@@ -40,6 +40,7 @@
       utils.pciutils
       utils.smart
       utils.tree
+      utils.ydotool
 
       virtualization.libvirtd
       (virtualization.nixvirt.windows10 {
