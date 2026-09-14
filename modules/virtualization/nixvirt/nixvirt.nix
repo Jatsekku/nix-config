@@ -6,6 +6,8 @@
 }:
 let
   writeXML = inputs.nixvirt.lib.domain.writeXML;
+  windows10TemplatePath = ./_templates/windows/windows10.nix;
+  linuxTemplatePath = ./_templates/linux.nix;
 in
 {
   den.aspects.virtualization.nixvirt = {
@@ -20,20 +22,23 @@ in
     # (den.aspects.virtualization.nixvirt.windows10 { ... })
     provides.windows10.__functor =
       _self:
-      {
-        name ? "test-win",
-        disks ? null,
+      args@{
+        name,
+        ...
       }:
       {
         # Include base nixvirt aspect
         includes = [ den.aspects.virtualization.nixvirt ];
 
         nixos =
-          { pkgs, ... }:
+          { config, pkgs, ... }:
           let
-            windows10Template = import ./_templates/windows10.nix {
+            windows10Template = import windows10TemplatePath {
               inherit pkgs lib;
             };
+
+            facterReport = config.hardware.facter.report or { };
+            hostUuid = lib.attrByPath [ "smbios" "system" "uuid" ] null facterReport;
           in
           {
             virtualisation.libvirt = {
@@ -41,9 +46,12 @@ in
                 domains = [
                   {
                     active = false;
-                    definition = writeXML (windows10Template {
-                      inherit name disks;
-                    });
+                    definition = writeXML (
+                      windows10Template args
+                      // {
+                        biosUuid = args.biosUuid or hostUuid;
+                      }
+                    );
                   }
                 ];
               };
@@ -55,18 +63,18 @@ in
     # (den.aspects.virtualization.nixvirt.linux { ... })
     provides.linux.__functor =
       _self:
-      {
-        name ? "test-win",
-        disks ? null,
+      args@{
+        name,
+        ...
       }:
       {
         # Include base nixvirt aspect
         includes = [ den.aspects.virtualization.nixvirt ];
 
         nixos =
-          { pkgs, ... }:
+          { config, pkgs, ... }:
           let
-            linuxTemplate = import ./_templates/linux.nix {
+            linuxTemplate = import linuxTemplatePath {
               inherit pkgs lib;
             };
           in
@@ -76,9 +84,7 @@ in
                 domains = [
                   {
                     active = false;
-                    definition = writeXML (linuxTemplate {
-                      inherit name disks;
-                    });
+                    definition = writeXML (linuxTemplate args);
                   }
                 ];
               };

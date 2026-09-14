@@ -1,37 +1,22 @@
 # Windows 10 Template: Performance & Simplicity
 { pkgs, lib, ... }:
-{
+args@{
   name,
-  uuid ? null,
-  memory ? {
-    count = 4;
-    unit = "GiB";
-  },
-  vcpu ? {
-    count = 2;
-    placement = "static";
-  },
-  arch ? "x86_64",
-  disks ? null,
-  nvram_path ? "/var/lib/libvirt/qemu/nvram/${name}_VARS.fd",
-  unattend_xml ? ./autounattend2.xml,
+  memory ? 4,
+  vcpu ? 2,
+  nvramPath ? "/var/lib/libvirt/qemu/nvram/${name}_VARS.fd",
+  unattendXml ? ./autounattend.xml,
+  biosUuid ? null,
+  ...
 }:
 let
-  base =
-    import ./base.nix
-      {
-        inherit pkgs lib;
-      }
-      {
-        inherit
-          name
-          uuid
-          memory
-          vcpu
-          arch
-          disks
-          ;
-      };
+  base = import ../base.nix { inherit pkgs lib; } (
+    removeAttrs args [
+      "nvramPath"
+      "unattendXml"
+      "biosUuid"
+    ]
+  );
 
   # Handling virtio-win driver
   baseDisks = base.devices.disk;
@@ -63,7 +48,7 @@ let
       }
       ''
         mkdir -p staging
-        cp ${unattend_xml} staging/autounattend.xml
+        cp ${unattendXml} staging/autounattend.xml
         xorriso -as mkisofs -iso-level 3 -o $out -V UNATTEND staging
       '';
 
@@ -80,7 +65,7 @@ let
     };
     target = {
       bus = "sata";
-      dev = "sdb";
+      dev = "sdy";
     };
     readonly = true;
   };
@@ -116,8 +101,17 @@ lib.recursiveUpdate base {
     };
     nvram = {
       template = "${pkgs.OVMFFull.fd}/FV/OVMF_VARS.ms.fd";
-      path = nvram_path;
+      path = nvramPath;
     };
   };
 
+  sysinfo = {
+    type = "smbios";
+    bios = [
+      {
+        name = "uuid";
+        value = biosUuid;
+      }
+    ];
+  };
 }

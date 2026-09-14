@@ -1,34 +1,12 @@
 { pkgs, lib, ... }:
-{
+args@{
   name,
-  uuid ? null,
-  memory ? {
-    count = 4;
-    unit = "GiB";
-  },
-  vcpu ? {
-    count = 2;
-    placement = "static";
-  },
-  arch ? "x86_64",
-  disks ? null,
+  memory ? 2,
+  vcpu ? 2,
+  ...
 }:
 let
-  base =
-    import ./base.nix
-      {
-        inherit pkgs lib;
-      }
-      {
-        inherit
-          name
-          uuid
-          memory
-          vcpu
-          arch
-          disks
-          ;
-      };
+  base = import ./base.nix { inherit pkgs lib; } args;
 in
 lib.recursiveUpdate base {
   clock = {

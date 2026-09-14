@@ -30,6 +30,26 @@ let
   # Use user provided uuid or fallback to random one
   effectiveUuid = if uuid != null then uuid else mkUuid name;
 
+  # Normalize RAM param
+  normalizedMemory =
+    if builtins.isInt memory then
+      {
+        count = memory;
+        unit = "GiB";
+      }
+    else
+      memory;
+
+  # Normalize vCPU param
+  normalizedVcpu =
+    if builtins.isInt vcpu then
+      {
+        count = vcpu;
+        placement = "static";
+      }
+    else
+      vcpu;
+
   # Host OS detection
   hostOS =
     if builtins.match ".*-linux" system != null then
@@ -164,7 +184,9 @@ in
 {
   # TODO: Consider assert if exceeding limits
   # RAM, vCPU cores,
-  inherit name memory vcpu;
+  inherit name;
+  memory = normalizedMemory;
+  vcpu = normalizedVcpu;
 
   uuid = effectiveUuid;
   type = effectiveHypervisorType;
@@ -191,5 +213,12 @@ in
   devices = {
     emulator = effectiveEmulatorPath;
     disk = mkDisks disks;
+  };
+
+  # Network interface
+  interface = {
+    type = "network";
+    source.network = "default";
+    model.type = "e1000e";
   };
 }
