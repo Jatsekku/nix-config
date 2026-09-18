@@ -18,6 +18,8 @@
       gaming.moonlight
       gaming.steam
 
+      math.octave
+
       shells.zsh
 
       (system.disko ./_disko.nix)
