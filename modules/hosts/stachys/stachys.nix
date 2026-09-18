@@ -6,6 +6,7 @@
   den.aspects.stachys = {
     includes = with den.aspects; [
       cad.kicad
+      cad.klayout
 
       desktop.niri
       desktop.plasma
