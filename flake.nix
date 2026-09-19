@@ -59,6 +59,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Atomic secret provisioning for NixOS based on sops.
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # The formatter multiplexer
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
