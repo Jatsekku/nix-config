@@ -50,6 +50,18 @@
           { path = "/var/lib/libvirt/images/win10-disk.qcow2"; }
         ];
       })
+      (virtualization.nixvirt.windows10 {
+        name = "win10-metal";
+        memory = 32;
+        vcpu = {
+          count = 24;
+          placement = "static";
+        };
+        disks = {
+          path = "/dev/disk/by-id/nvme-WD_BLACK_SN850X_1000GB_24122X800837";
+          serial = "24122X800837";
+        };
+      })
       (virtualization.nixvirt.linux {
         name = "alpine";
         disks = "/home/jatsekku/Downloads/alpine-standard-3.24.1-x86_64.iso";
