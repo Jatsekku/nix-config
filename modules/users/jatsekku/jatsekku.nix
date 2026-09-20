@@ -8,6 +8,7 @@
       # is very specific per user and is not intended to be shared.
       # Yet I still want to apply separation of concerns and keep settings in different files.
       den.aspects.jatsekku.git
+      den.aspects.jatsekku.obsidian
 
       # Define a user at OS and homeManager levels.
       den.batteries.define-user
