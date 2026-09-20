@@ -14,6 +14,8 @@
     den.batteries.hostname
     # Assign hostId hash based on provided hostnme
     den.aspects.system.hostid
+    # Automatically set up sops
+    den.aspects.system.sops
   ];
 
   den.schema.user = {
@@ -26,6 +28,8 @@
       den.aspects.shells.zsh
       # Set up ssh client config for each user
       den.aspects.system.ssh.client
+      # Automatically set up sops
+      den.aspects.system.sops
     ];
   };
 }
