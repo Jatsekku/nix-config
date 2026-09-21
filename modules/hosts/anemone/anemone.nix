@@ -14,6 +14,7 @@
       desktop.sddm
 
       editors.arduino
+      editors.gitkraken
       editors.nixvim
 
       gaming.moonlight
