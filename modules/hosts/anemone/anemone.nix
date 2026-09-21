@@ -12,6 +12,7 @@
       editors.nixvim
 
       gaming.steam
+      gaming.sunshine
 
       shells.zsh
 
