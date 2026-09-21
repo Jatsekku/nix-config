@@ -9,6 +9,7 @@
       desktop.plasma
       desktop.sddm
 
+      editors.arduino
       editors.nixvim
 
       gaming.moonlight
