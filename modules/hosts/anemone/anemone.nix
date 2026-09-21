@@ -20,6 +20,8 @@
       gaming.steam
       gaming.sunshine
 
+      math.octave
+
       services.printing
 
       shells.zsh
