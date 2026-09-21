@@ -11,6 +11,7 @@
 
       editors.nixvim
 
+      gaming.moonlight
       gaming.steam
       gaming.sunshine
 
