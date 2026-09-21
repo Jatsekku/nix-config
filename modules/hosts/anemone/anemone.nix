@@ -17,6 +17,7 @@
 
       (system.disko ./_disko.nix)
       (system.facter ./_facter.json)
+      system.facter-debug
       system.git
       system.grub
       system.locale
