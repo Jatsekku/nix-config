@@ -25,6 +25,7 @@
       system.nix
 
       utils.fzf
+      utils.pciutils
       utils.smart
       utils.tree
 
