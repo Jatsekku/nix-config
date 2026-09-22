@@ -43,6 +43,8 @@
       utils.tree
       utils.ydotool
 
+      vms.andrena
+
       web.chromium
     ];
 

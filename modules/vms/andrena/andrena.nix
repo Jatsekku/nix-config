@@ -1,11 +1,18 @@
-{ den, lib, ... }:
+{
+  den,
+  ...
+}:
 let
-  name = "Andrena-win10";
+  name = "andrena-win10";
+  lookingGlassDisplays = [ ];
   isoFilePath = "/home/jatsekku/Downloads/Win10_22H2_EnglishInternational_x64v1.iso";
   storageDiskPath = "/var/lib/libvirt/images/win10-disk.qcow2";
+  memory = 8;
+  vcpu = 8;
 
   extraConfig = {
     devices = {
+      # QEMU Guest Agent
       channel = [
         {
           type = "unix";
@@ -18,6 +25,13 @@ let
           };
         }
       ];
+
+      # Network interface
+      interface = {
+        type = "network";
+        source.network = "default";
+        model.type = "virtio";
+      };
     };
   };
 in
@@ -25,7 +39,13 @@ in
   den.aspects.vms.andrena = {
     includes = with den.aspects; [
       (virtualization.nixvirt.windows10 {
-        inherit name extraConfig;
+        inherit
+          name
+          memory
+          vcpu
+          extraConfig
+          lookingGlassDisplays
+          ;
         disks = [
           { path = isoFilePath; }
           { path = storageDiskPath; }
