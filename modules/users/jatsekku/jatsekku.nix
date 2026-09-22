@@ -10,6 +10,8 @@
       den.aspects.jatsekku.git
       den.aspects.jatsekku.obsidian
 
+      den.aspects.virtualization.winapps
+
       # Define a user at OS and homeManager levels.
       den.batteries.define-user
       # Set as primary user.
