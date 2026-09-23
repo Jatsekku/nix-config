@@ -43,6 +43,22 @@
       utils.tree
       utils.ydotool
 
+      (virtualization.passthrough {
+        "GPU-RX6000" = {
+          devices = [
+            {
+              address = "0000:0d:00.1";
+              id = "1002:ab28";
+            }
+            {
+              address = "0000:0d:00.0";
+              id = "1002:73ff";
+            }
+          ];
+          bindOnBoot = true;
+        };
+      })
+
       vms.andrena
 
       web.chromium
