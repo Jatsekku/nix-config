@@ -72,6 +72,7 @@
       })
 
       vms.andrena
+      vms.osmia
 
       web.chromium
     ];
