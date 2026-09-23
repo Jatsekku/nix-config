@@ -25,6 +25,7 @@ in
       args@{
         name,
         extraConfig ? { },
+        lookingGlassDisplays ? [ ],
         ...
       }:
       {
@@ -49,11 +50,50 @@ in
             facterReport = config.hardware.facter.report or { };
             hostUuid = lib.attrByPath [ "smbios" "system" "uuid" ] null facterReport;
 
-            cleanArgs = removeAttrs args [ "extraConfig" ];
+            # Looking Glass handling
+            hasHostLGlassEnabled = lib.attrByPath [ "virtualisation" "looking-glass" "enable" ] false config;
+            areLGlassDisplaysRequested = lookingGlassDisplays != [ ];
+            lGlassNixVirtSettingsFor = config.virtualisation.looking-glass.nixVirtSettingsFor;
+            lGlassDisplaysSettingsQemu =
+              assert !areLGlassDisplaysRequested || hasHostLGlassEnabled || throw "Looking Glass not enabled";
+              if areLGlassDisplaysRequested then
+                lib.concatMap (
+                  displayName: lGlassNixVirtSettingsFor.${displayName}.qemuCommandLineArgs
+                ) lookingGlassDisplays
+              else
+                [ ];
 
-            finalDomain = lib.recursiveUpdate (
-              windows10Template cleanArgs // { biosUuid = args.biosUuid or hostUuid; }
-            ) extraConfig;
+            lGlassDisplaysSharedMemory =
+              assert !areLGlassDisplaysRequested || hasHostLGlassEnabled || throw "Looking Glass not enabled";
+              if areLGlassDisplaysRequested then
+                lib.concatMap (
+                  displayName: lGlassNixVirtSettingsFor.${displayName}.sharedMemory
+                ) lookingGlassDisplays
+              else
+                [ ];
+
+            lGlassConfig =
+              lib.optionalAttrs (lGlassDisplaysSettingsQemu != [ ]) {
+                qemu-commandline = {
+                  arg = lGlassDisplaysSettingsQemu;
+                };
+              }
+              // lib.optionalAttrs (lGlassDisplaysSharedMemory != [ ]) {
+                devices = {
+                  shmem = lGlassDisplaysSharedMemory;
+                };
+              };
+
+            cleanArgs = removeAttrs args [
+              "extraConfig"
+              "lookingGlassDisplays"
+            ];
+
+            finalDomain =
+              lib.recursiveUpdate (
+                windows10Template cleanArgs // { biosUuid = args.biosUuid or hostUuid; }
+              ) extraConfig
+              // lGlassConfig;
           in
           {
             virtualisation.libvirt = {
