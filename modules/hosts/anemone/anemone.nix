@@ -43,6 +43,18 @@
       utils.tree
       utils.ydotool
 
+      (virtualization.looking-glass {
+        "virtDisp0" = {
+          width = 5120;
+          height = 1440;
+          permissions = {
+            user = "jatsekku";
+            group = "qemu-libvirtd";
+            mode = "0660";
+          };
+        };
+      })
+
       (virtualization.passthrough {
         "GPU-RX6000" = {
           devices = [
