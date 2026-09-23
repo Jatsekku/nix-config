@@ -16,6 +16,9 @@ let
     };
 
     devices = {
+      # Not recommended for Looking Glass/RAM pinning
+      memballoon.model = "none";
+
       # Network interface
       interface = {
         type = "network";
