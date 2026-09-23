@@ -71,6 +71,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # VFIO stealth tuning for NixOS.
+    vfio-stealth = {
+      url = "github:Daaboulex/vfio-stealth-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Run Windows apps in Linux
     winapps-nix = {
       url = "github:Jatsekku/winapps-nix";
