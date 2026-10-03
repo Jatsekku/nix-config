@@ -53,6 +53,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Higher-level VM managament based on NixVirt
+    nix-vm = {
+      url = "path:/home/jatsekku/nixVM";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # LibVirt domain management for Nix.
     nixvirt = {
       url = "github:AshleyYakeley/NixVirt";
