@@ -33,8 +33,8 @@
             { spice = { }; }
             {
               looking-glass = {
-                bpp = 16;
-                #kvmfr = false;
+                width = 5120;
+                height = 1440;
                 permissions = {
                   user = "jatsekku";
                   group = "qemu-libvirtd";
