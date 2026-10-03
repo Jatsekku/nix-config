@@ -59,6 +59,8 @@
         };
       })
 
+      vms.osmia
+
       web.chromium
     ];
 
