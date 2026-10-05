@@ -53,6 +53,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Install flatpaks declaratively
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+
     # Higher-level VM managament based on NixVirt
     nix-vm = {
       url = "path:/home/jatsekku/nixVM";
