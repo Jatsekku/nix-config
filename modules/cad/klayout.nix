@@ -1,9 +1,10 @@
 {
   den.aspects.cad.klayout = {
     nixos = { pkgs, ... }: {
-      environment.systemPackages = [
-        # Layout viewer and editor with GDS and OASIS support
-        pkgs.klayout
+      services.flatpak.packages = [
+        {
+          appId = "de.klayout.KLayout";
+        }
       ];
     };
   };
