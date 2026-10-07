@@ -30,6 +30,7 @@
       (system.disko ./_disko.nix)
       (system.facter ./_facter.json)
       system.facter-debug
+      system.flatpak
       system.git
       system.grub
       system.locale
