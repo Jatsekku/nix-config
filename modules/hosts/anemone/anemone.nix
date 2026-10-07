@@ -8,6 +8,7 @@
       ai.claude
 
       cad.kicad
+      cad.klayout
 
       desktop.niri
       desktop.plasma
