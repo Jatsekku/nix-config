@@ -3,14 +3,37 @@
   den.aspects.vms.osmia = {
     includes = [ den.aspects.virtualization.nix-vm ];
 
-    nixos = {
+    nixos = { pkgs, ... }: {
+      # Required for virtioFS
+      #environment.systemPackages = [ pkgs.virtiofsd ];
+      virtualisation.libvirtd.qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
+
       nix-vm.vms."osmia-win10" = {
         os = "windows";
         extraNixVirtConfig = {
+
+          # Required for virtioFS
+          memoryBacking = {
+            source.type = "memfd";
+            access.mode = "shared";
+          };
+
           devices = {
             # Not recommended for Looking Glass/RAM pinning
             memballoon.model = "none";
 
+            # Folder shaared over virtioFS
+            filesystem = [
+              {
+                type = "mount";
+                accessmode = "passthrough";
+                driver.type = "virtiofs";
+                source.dir = "/home/jatsekku/osmia-shared";
+                target.dir = "osmia";
+              }
+            ];
+
+            # Audio
             sound = {
               model = "ich9";
               audio = {
