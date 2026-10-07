@@ -39,6 +39,7 @@
 
       utils.fzf
       utils.pciutils
+      utils.simple-scan
       utils.smart
       utils.tree
       utils.ydotool
