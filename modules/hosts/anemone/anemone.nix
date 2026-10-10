@@ -68,6 +68,10 @@
     ];
 
     nixos = {
+      environment.sessionVariables = {
+        KWIN_DRM_DEVICES = "/dev/dri/by-path/pci-0000\\\\:05\\\\:00.0-card";
+      };
+
       boot.initrd.availableKernelModules = [
         "nvme"
         "xhci_pci"
