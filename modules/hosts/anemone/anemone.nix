@@ -58,7 +58,7 @@
               id = "1002:73ff";
             }
           ];
-          bindOnBoot = true;
+          #bindOnBoot = true;
         };
       })
 
