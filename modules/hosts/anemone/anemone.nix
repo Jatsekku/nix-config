@@ -44,6 +44,7 @@
       utils.simple-scan
       utils.smart
       utils.tree
+      utils.usbutils
       utils.ydotool
 
       (virtualization.passthrough {
