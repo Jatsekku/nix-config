@@ -47,6 +47,7 @@
       utils.usbutils
       utils.ydotool
 
+      virtualization.docker
       (virtualization.passthrough {
         "GPU-RX6000" = {
           devices = [
