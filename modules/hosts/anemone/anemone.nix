@@ -29,6 +29,7 @@
       shells.zsh
 
       (system.disko ./_disko.nix)
+      system.envfs
       (system.facter ./_facter.json)
       system.facter-debug
       system.flatpak
