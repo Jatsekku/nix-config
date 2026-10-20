@@ -17,6 +17,7 @@
       editors.arduino
       editors.gitkraken
       editors.nixvim
+      editors.vscode
 
       gaming.moonlight
       gaming.steam
