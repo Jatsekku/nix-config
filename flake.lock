@@ -557,8 +557,8 @@
         "vfio-stealth": "vfio-stealth"
       },
       "locked": {
-        "lastModified": 1791493804,
-        "narHash": "sha256-T8zIAyALHq+Y7dJ9FwHC4gWBy10WB1gs1huDNp3SsJc=",
+        "lastModified": 1792348772,
+        "narHash": "sha256-37EBS6q5yhHud60pSi2P4milpMeZyJiays1lRBASMyI=",
         "path": "/home/jatsekku/nixVM",
         "type": "path"
       },
