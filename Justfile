@@ -11,3 +11,11 @@ burn-artemisia disk="/dev/disk/by-id/usb-MS_YSUSP20-256GSR_AA000000000000000479-
         --flake .#artemisia \
         --disk main "{{disk}}"
 
+# Deploy host configuration remotely via nixos-anywhere
+# Usage: just deploy HOST IP
+deploy host ip:
+    @read -p "Deploy [{{host}}] to [{{ip}}] via nixos-anywhere? [y/N] " confirm && [[ "$confirm" =~ ^[yY]$ ]] || { echo "Aborted."; exit 0; }
+    nix run nixpkgs#nixos-anywhere -- \
+    --flake .#{{host}} \
+    --generate-hardware-config nixos-facter ./modules/hosts/{{host}}/_facter.json \
+    root@{{ip}}
