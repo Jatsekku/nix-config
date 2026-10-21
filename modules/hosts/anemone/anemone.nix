@@ -26,6 +26,7 @@
       math.octave
 
       services.printing
+      services.meshcentral
 
       shells.zsh
 
