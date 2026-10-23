@@ -5,5 +5,6 @@
     nari = { };
     root = { };
   };
+  den.hosts.x86_64-linux.selaginella.users = { };
   den.hosts.x86_64-linux.stachys.users.jatsekku = { };
 }
