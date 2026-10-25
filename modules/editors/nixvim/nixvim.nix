@@ -13,6 +13,8 @@
         nixpkgs.source = inputs.nixpkgs;
 
         opts = {
+          # Wait up to 300ms for another stroke
+          timeoutlen = 300;
           expandtab = lib.mkDefault true;
           tabstop = lib.mkDefault 4;
           shiftwidth = lib.mkDefault 4;
