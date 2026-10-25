@@ -7,6 +7,8 @@
     includes = with den.aspects; [
       editors.nixvim
 
+      services.home-assistant
+
       shells.zsh
 
       (system.disko ./_disko.nix)
