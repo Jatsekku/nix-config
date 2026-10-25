@@ -9,6 +9,14 @@
         viAlias = lib.mkDefault true;
         vimAlias = lib.mkDefault true;
 
+        # Set colorscheme
+        colorschemes.catppuccin = {
+          enable = true;
+          settings = {
+            flavour = "mocha";
+          };
+        };
+
         # Force nixvim to use system provided nixpkgs
         nixpkgs.source = inputs.nixpkgs;
 
