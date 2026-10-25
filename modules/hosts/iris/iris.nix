@@ -8,6 +8,7 @@
       editors.nixvim
 
       services.home-assistant
+      services.immich
 
       shells.zsh
 
