@@ -19,5 +19,12 @@
       # Set and enable user default shell.
       (den.batteries.user-shell "zsh")
     ];
+
+    nixos = {
+      users.users.jatsekku = {
+        # Set initial password
+        initialHashedPassword = "$y$j9T$DkvyScsBne2S8PWXQetoA1$MvQG7daPZi9g9PnC7x1.V2Xsc7wI38yuSAKxIK1A6i9";
+      };
+    };
   };
 }
