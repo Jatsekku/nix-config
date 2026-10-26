@@ -11,6 +11,7 @@
       services.home-assistant
       services.immich
       services.jellyfin
+      services.zigbee2mqtt
 
       shells.zsh
 
