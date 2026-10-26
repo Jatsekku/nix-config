@@ -7,6 +7,7 @@
     includes = with den.aspects; [
       editors.nixvim
 
+      services.avahi
       services.home-assistant
       services.immich
 
