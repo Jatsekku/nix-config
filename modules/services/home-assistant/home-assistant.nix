@@ -1,5 +1,9 @@
-{
+{ den, ... }: {
   den.aspects.services.home-assistant = {
+    includes = [
+      den.aspects.services.home-assistant.voice
+    ];
+
     nixos = { config, lib, ... }: {
       services.home-assistant = {
         # Enable service
