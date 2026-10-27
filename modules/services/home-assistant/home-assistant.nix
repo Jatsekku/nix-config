@@ -4,6 +4,8 @@
       services.home-assistant = {
         # Enable service
         enable = true;
+        # Do not allow edit from HA's web interface
+        configWritable = false;
 
         extraComponents = [
           # Components required to complete the onboarding
