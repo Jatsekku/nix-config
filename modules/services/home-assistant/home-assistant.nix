@@ -1,6 +1,7 @@
 { den, ... }: {
   den.aspects.services.home-assistant = {
     includes = [
+      den.aspects.services.home-assistant.lights
       den.aspects.services.home-assistant.voice
     ];
 
