@@ -4,6 +4,7 @@
       den.aspects.services.home-assistant.lights
       den.aspects.services.home-assistant.roborock
       den.aspects.services.home-assistant.voice
+      den.aspects.services.home-assistant.xiaomi
     ];
 
     nixos = { config, lib, ... }: {
