@@ -4,7 +4,7 @@
     nixos = {
       imports = [ inputs.gpu-passthrough.nixosModules.default ];
 
-      hardware.pciPassthrough = {
+      hardware.pci-passthrough = {
         enable = true;
         inherit devicesLists;
       };
