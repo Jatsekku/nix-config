@@ -44,6 +44,7 @@
 
       utils.fzf
       utils.pciutils
+      utils.radeontop
       utils.simple-scan
       utils.smart
       utils.tree
