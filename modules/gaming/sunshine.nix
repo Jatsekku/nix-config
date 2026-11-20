@@ -8,6 +8,7 @@
         autoStart = lib.mkDefault false;
         # Open required ports
         openFirewall = lib.mkDefault true;
+        capSysAdmin = lib.mkDefault true;
       };
 
       # Virtual input devices support
